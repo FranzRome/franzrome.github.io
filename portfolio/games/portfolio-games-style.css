@@ -1,0 +1,142 @@
+/* {
+  cursor:none;
+}*/
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+div {
+    position: relative;
+}
+
+#background {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background: url("./portfolio_games.avif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    overflow: hidden;
+}
+
+#dialog {
+    z-index: 4;
+    top: 80px;
+    left: 630px;
+    width: 360px;
+    min-height: 160px;
+    transform: scale(0);
+    border-color: rgb(31, 31, 31);
+    border-style: solid;
+    border-width: 4px;
+    background-color: rgb(87, 87, 87);
+    color: white;
+    padding: 12px 18px;
+    font-size: 24pt;
+    transition: 0.6s;
+}
+
+a:hover~#dialog {
+    transform: scale(1);
+}
+
+#a {
+    z-index: 2;
+    position: absolute;
+    left: 1108px;
+    top: 263px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px 5px #75c606;
+    animation-name: pulsation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulsation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#b {
+    z-index: 1;
+    position: absolute;
+    left: 1138px;
+    top: 254px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px 5px #c40313;
+    animation-name: pulsation;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+#x {
+    z-index: 1;
+    position: absolute;
+    left: 1076px;
+    top: 247px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px 5px #045dc5;
+}
+
+#y {
+    z-index: 0;
+    position: absolute;
+    left: 1110px;
+    top: 237px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px 5px #dd6b04;
+}
+
+#blur {
+    position: fixed;
+    z-index: 3;
+    pointer-events: none;
+    /* twice the viewport size so it always covers fully */
+    width: 200vw;
+    height: 200vh;
+    /* negative offset by half so we are sure we cover the full viewport */
+    left: -100vw;
+    top: -100vh;
+    /* we'll use transform translate to move it */
+    transform-origin: center;
+    -webkit-backdrop-filter: blur(150px);
+    backdrop-filter: blur(20px);
+    -webkit-mask-image: radial-gradient(300px at 50% 50%, transparent 35%, black 100%);
+    mask-image: radial-gradient(300px at 50% 50%, transparent 35%, black 100%);
+    transition: 0.15s;
+}
+
+#a:hover~#blur {
+    box-shadow: 0px 0px 3px 5px #c68306;
+    -webkit-mask-image: radial-gradient(60px at 50% 50%, transparent 35%, black 100%);
+    mask-image: radial-gradient(60px at 50% 50%, transparent 35%, black 100%);
+    /*width: 70%;
+    height: 70%;*/
+    /*transform: scale(0.3, 0.3) !important;*/
+}
+
+/*falback for browsers that don't have backdrop-filter */
+@supports not ((backdrop-filter: blur(0px)) or (-webkit-backdrop-filter: blur(0px))) {
+    #blur {
+        background-color: rgba(255, 255, 255, .8);
+    }
+}

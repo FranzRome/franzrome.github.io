@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Francesco Romeo</title>
+  <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
+  <!--link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin-->
+  <!--Montserrat font-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script defer src="main.js"></script>
+</head>
+
+<body>
+  <section>
+    <!-- MOBILE NAVIGATION -->
+    <div class="w3-container w3-padding-16 w3-border-bottom w3-hide-medium w3-hide-large">
+      <a href="#home" class="w3-bar-item w3-button w3-hover-none">CURRICULUM VITAE</a>
+      <a href="./vue-weather/" class="w3-bar-item w3-button w3-hover-none">MY WEB APP</a>
+      <!-- a href="./portfolio/games/" class="w3-bar-item w3-button w3-hover-none">MY GAMES PORTFOLIO</a>
+      <a href="./portfolio/mobile/" class="w3-bar-item w3-button w3-hover-none">MOBILE APPS</a -->
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+        onclick="toggleNavigation()">&#9776;</a>
+    </div>
+    <div id="mobile-nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-sticky">
+      <a href="#about"
+        class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange"
+        onclick="toggleNavigation()">ABOUT</a>
+      <a href="#resume"
+        class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange"
+        onclick="toggleNavigation()">RESUME</a>
+      <a href="#contact"
+        class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange"
+        onclick="toggleNavigation()">CONTACT</a>
+    </div>
+
+
+    <!-- SOCIAL SECTION -->
+    <div id="modal-avatar" class="w3-modal modal-avatar w3-animate-opacity" onclick="closeModal()">
+      <img class="w3-circle modal-avatar-image" src="avatar.jpg">
+      <h2 class="modal-avatar-text">Here I am</h2>
+    </div>
+
+    <section class="image-section w3-quarter w3-fixed w3-padding-small foreground">
+      <!--IMAGE/AVATAR-->
+      <img src="avatar.jpg" class="w3-circle w3-border w3-border-white w3-hover-border-orange" onclick="openModal()"
+        style="border-width: 3px !important; transition:0.3s" />
+
+
+      <!--SOCIAL LINKS-->
+      <div style="display: flex; flex-direction: row; justify-content:center;">
+        <div class="w3-container w3-cell-center w3-margin-top w3-padding-small">
+          <a class="icon-link w3-text-sand w3-hover-text-orange"
+            href="https://www.linkedin.com/in/francesco-romeo-446b96141/" target="_blank">
+            <i data-feather="linkedin" class="linkedin-icon"></i>
+          </a>
+        </div>
+        <div class="w3-container w3-cell-center w3-margin-top w3-padding-small">
+          <a class="icon-link w3-text-sand w3-hover-text-orange" href="https://github.com/FranzRome" target="_blank">
+            <i data-feather="github" class="github-icon"></i>
+          </a>
+        </div>
+      </div>
+      <!--CV DOWNLOAD BUTTON-->
+      <div class="w3-container w3-padding-16"
+        style="display: flex; flex-direction: row; justify-content:space-between;">
+        <a href=" Francesco Romeo CV IT - 2022.11.21.pdf" class="download-cv w3-hover-amber w3-button w3-round-small"
+          target="_blank" download>
+
+          <span class="w3-margin-left download-text">DOWNLOAD CV <br>
+            <i data-feather="arrow-down" style="vertical-align: -0.35em;"></i>(Italian)</br></span>
+        </a>
+        <a href="Francesco Romeo CV EN - 2022.11.21.pdf" class="download-cv w3-hover-amber w3-button w3-round-small"
+          target="_blank" download>
+
+          <span class="w3-margin-left download-text">DOWNLOAD CV <br>
+            <i data-feather="arrow-down" style="vertical-align: -0.35em;"></i>(English)</br></span>
+        </a>
+      </div>
+    </section>
+
+
+    <!--CV CONTENT SECTION-->
+    <section class="w3-threequarter w3-padding-large w3-right">
+      <!--DESKTOP NAVIGATION-->
+      <div class="w3-container w3-padding-large w3-border-bottom w3-hide-small">
+        <a href="#home"
+          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange">CURRICULUM
+          VITAE</a>
+        <a href="./vue-weather/"
+          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange">MY WEB APP</a>
+        <!-- a href="./portfolio/games/"
+          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange">MY GAMES PORTFOLIO</a>
+        <a href="./portfolio/mobile/"
+        class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange">MOBILE APPS</a -->
+        <a href="#contact"
+          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange w3-right w3-hide-small"
+          style="border-width: 2px !important;" onclick="toggleNavigation()">CONTACT</a>
+        <a href="#resume"
+          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange w3-right w3-hide-small"
+          style="border-width: 2px !important;" onclick="toggleNavigation()">RESUME</a>
+        <a href="#about"
+          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange w3-right w3-hide-small"
+          style="border-width: 2px !important;" onclick="toggleNavigation()">ABOUT</a>
+      </div>
+      <div class="content-container w3-margin-top-2">
+        <!--HOME SECTION-->
+        <div id="home" class="home w3-container w3-margin-top-4 w3-cursive">
+          <p style="font-style: italic; font-size:x-large;">“Patience is a key element of success”</p>
+          <h1>Francesco Romeo</h1>
+          <h2>Software, Mobile & Game Developer<br>AI Passionate</h2>
+          <p></p>
+        </div>
+
+        <!--ABOUT SECTION-->
+        <div id="about" class="w3-container w3-margin-top-20-percent w3-cursive w3-large hidden">
+          <h2 class="w3-border-bottom w3-border-orange" style="border-width: 3px !important;">ABOUT</h2>
+          <p class="w3-margin-top-2">
+            At a very young age I became passionate about the world of technology and computer science.
+            At the age of 15 I learned my first visual programming language called Scratch.
+          </p>
+
+          <p>
+            In high school I started learning procedural languages and OOP, the basics of the web and networks.
+            Moved by my passion for games I studied game development using Unity Engine.
+          </p>
+
+          <p>
+            In college I continued learning OOP (java) and AI programming (Python).
+            In addition I also studied algorithm complexity (O notation) and how to make them work on large data
+            structures.
+          </p>
+        </div>
+
+        <!--RESUME-->
+        <div id="resume" class="w3-container w3-margin-top-20-percent w3-cursive hidden">
+          <h2 class="w3-border-bottom w3-border-orange" style="border-width: 3px !important;">RESUME</h2>
+          <div class="w3-container w3-margin-top-2 w3-cursive">
+
+            <!--EMPLOYMENT HISTORY SECTION-->
+            <h3 class="w3-border-orange">MY EMPLOYMENT HISTORY</h3>
+            <div class="">
+              <h4>
+                Computer vision specialist at
+                <a href="https://www.linkedin.com/company/astar-sport-intelligence">
+                  Astar srl.
+                </a>
+              </h4>
+              <p>February 2020 - October 2020</p>
+              <ul class="w3-ul" style="font-weight: 500;">
+                <li>
+                  - Composed datasets using DeepLabCut to subsequentially train a ResNet model and improved the tool
+                  UI to make it more efficient.
+                </li>
+                <li>
+                  - Marked hundreds of frames of a football match in order to make an AI (based on YOLOv3 and OpenCV)
+                  recognize the players and process stats.
+                </li>
+                <li>
+                  - Used Qt, the multiplatform framework to create the GUI of our product prototype
+                </li>
+                <li>
+                  - Made web interfaces to start recording from cameras placed in a remote stadium.
+                </li>
+              </ul>
+            </div>
+
+            <div class="">
+              <h4>Salesforce Developer at <a href="https://www.alten.it/"> Alten </a></h4>
+              <p>October 2019 - January 2020</p>
+              <ul class="w3-ul" style="font-weight: 500;">
+                <li> - Maintained IT service ticketing system using Remedyforce.</li>
+                <li> - Maintained applications using Salesforce.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!---EDUCATION SECTION-->
+          <div class="w3-container w3-margin-top-2 w3-cursive">
+            <h3 class="w3-border-orange">MY EDUCATION</h3>
+            <h4>Mobile & Game Developer Higher Technician, ITS ICT Piemonte, Turin (TO)</h4>
+            <p>November 2021 - July 2023 (ongoing)</p>
+            <h4>Computer science, Università degli studi di Torino, Turin (TO)</h4>
+            <p>October 2017 - October 2019 </p>
+            <h4>Highschool Diploma, Pininfarina Institute, Moncalieri (TO)</h4>
+            <p>September 2012 - July 2017 </p>
+          </div>
+
+          <!--SKILLS SECTION-->
+          <div class="w3-container w3-margin-top-2 w3-cursive">
+            <h3 class="w3-border-orange">MY SKILLS</h3>
+            <!--SOFT SKILLS-->
+            <h4>Soft skills</h4>
+            <ul class="w3-ul" style="font-weight: 500;">
+              <li> - Excellent problem solving capability, fundamental for a developer.</li>
+              <li> - Empathy and respect towards customers and colleagues.</li>
+              <li> - Notable communication skills and good confidence in front of an audience.</li>
+              <li> - Time management competence to improve productivity.</li>
+              <li> - Care of communication design and feedback from users regarding my products.</li>
+            </ul>
+            <!--TECHNICAL SKILLS-->
+            <h4>Technical Skills</h4>
+            <div class="icons-container">
+              <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin"
+                class="icon hidden">
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg"
+                alt="Swift" class="icon hidden">
+              <img src=" https://d29fhpw069ctt2.cloudfront.net/icon/image/38737/preview.svg" alt="React"
+                class="icon hidden">
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                alt="JavaScript" class="icon hidden">
+            </div>
+            <ul class="w3-ul" style="font-weight: 500;">
+              <h5>Languages:</h5>
+              <p> Kotlin, Swift, Python, C, C++, C#, Java, JavaScript, HTML, CSS, SQL.</p>
+
+              <h5>Frameworks & Libraries:</h5>
+              <p>
+                Picasso, Glide, Retrofit, Vue.js, Quasar, Angular, React, ReactNative, Flutter,
+                Processing, PyQt, Selenium, Keras, TensorFlow.
+              </p>
+
+              <h5>Text Editor & IDE:</h5>
+              <p>
+                Android Studio, WebStorm, Pycharm, IntelliJ, XCode, Rider, Visual Studio, VS Code, Eclipse, Atom,
+                Notepad++.
+              </p>
+
+              <h5>Game engines:</h5>
+              <p>Unity, Construct, GDevelop, Impact.</p>
+
+              <h5>Graphic & Prototyping:</h5>
+              <p>Cinema-4D, Adobe Photoshop, Adobe Premiere Pro, Adobe Xd, Figma, Processing</p>
+
+              <h5>Office:</h5>
+              <p>Google Suite, Microsoft Office, Miro</p>
+
+              <h5>Databases:</h5>
+              <p>Mysql, MongoDB, Firebase, PostgreSQL</p>
+
+              <h5>Versioning & Related Services:</h5>
+              <p>git, GitLab, GitHub, Github Desktop, Source Tree</p>
+
+              <h5>Object detection & Pose estimation:</h5>
+              <p>Yolo v4 Darknet, DeepLabCut, OpenCV</p>
+            </ul>
+          </div>
+
+          <!--INTERESTS SECTION-->
+          <div class="w3-container w3-margin-top-2 w3-cursive">
+            <h3 class="w3-border-orange">MY HOBBIES AND INTERESTS</h3>
+            <ul class="w3-ul" style="font-weight: 500;">
+              <li>In my spare time i love solving puzzles and creating new UI designs.</li>
+              <li>I also like to test web sites/APPs web scraping them.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!--CONTACT SECTION-->
+        <div id="contact" class="w3-container w3-margin-top-20-percent w3-cursive hidden">
+          <h2 class="w3-border-bottom w3-border-orange" style="border-width: 3px !important;">MY CONTACT DETAILS</h3>
+            <div class="w3-margin-top-2" style="font-weight: 500;">
+              <p>Name: Francesco Romeo</p>
+              <p>Adress: Corso Cosenza 81, 10137 Turin, Italy</p>
+              <p>Phone number: +39 393 326 1370</p>
+              <p>E-mail: francesco.romeo-work@libero.it</p>
+            </div>
+        </div>
+
+
+        <div id="privacy" class="w3-container w3-margin-top-20-percent w3-cursive hidden">
+          <p>
+            I authorize the processing of personal data contained in my curriculum vitae based on art. 13 GDPR 679/16
+          </p>
+        </div>
+
+
+        <!--FOOTER-->
+        <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+        <footer class="w3-container w3-border-top w3-center w3-margin-top-4">
+          <p>©2022 - Francesco Romeo</p>
+          <!-- End footer -->
+        </footer>
+
+        <!--END OF CV SECTION-->
+    </section>
+  </section>
+  <script>
+    // Function to toggle mobile navigation
+    function toggleNavigation() {
+      let nav = document.getElementById("mobile-nav");
+      if (nav.classList.contains('w3-show')) {
+        nav.classList.remove('w3-show');
+      } else {
+        nav.classList.add('w3-show');
+      }
+    }
+  </script>
+  <script>
+    // Script to load feather icons
+    feather.replace()
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+/* {
+  cursor:none;
+}*/
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0px !important;
+
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div {
+    position: relative;
+}
+
+#background {
+    min-height: 100vh;
+    height: 1080px;
+    width: 1920px;
+    transform: translate(0, 0);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    background: url("./portfolio_mobile.avif");
+    background-repeat: no-repeat;
+}
+
+@media screen {}
+
+#dialog {
+    z-index: 4;
+    margin: 14px;
+    top: 70px;
+    left: 360px;
+    width: 360px;
+    min-height: 160px;
+    transform: scale(0);
+    border-color: rgb(31, 31, 31);
+    border-style: solid;
+    border-width: 4px;
+    background-color: rgb(87, 87, 87);
+    color: white;
+    padding: 12px 18px;
+    font-size: 24pt;
+    transition: 0.6s;
+}
+
+a:hover~#dialog {
+    transform: scale(1);
+}
+
+.app {
+    z-index: 2;
+    width: 80px;
+    height: 80px;
+    border-radius: 25%;
+    animation-name: shake;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(-5deg);
+    }
+
+    65% {
+        transform: rotate(5deg);
+    }
+
+    70% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+
+    80% {
+        transform: rotate(-5deg);
+    }
+
+    85% {
+        transform: rotate(5deg);
+    }
+
+    90% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#mercato-continuo {
+    position: absolute;
+    left: 825px;
+    top: 195px;
+    animation-delay: -0.45s;
+}
+
+#way2learn {
+    position: absolute;
+    left: 1030px;
+    top: 195px;
+
+}
+
+#fraandrea {
+    position: absolute;
+    left: 925px;
+    top: 195px;
+    animation-delay: -0.25s;
+}
+
+
+#b {
+    z-index: 1;
+    position: absolute;
+    left: 1138px;
+    top: 254px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px 5px #c40313;
+    animation-name: pulsation;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+#x {
+    z-index: 1;
+    position: absolute;
+    left: 1076px;
+    top: 247px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px 5px #045dc5;
+}
+
+#y {
+    z-index: 0;
+    position: absolute;
+    left: 1110px;
+    top: 237px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px 5px #dd6b04;
+}
+
+#blur {
+    position: fixed;
+    z-index: 3;
+    pointer-events: none;
+    /* twice the viewport size so it always covers fully */
+    width: 200vw;
+    height: 200vh;
+    /* negative offset by half so we are sure we cover the full viewport */
+    left: -100vw;
+    top: -100vh;
+    /* we'll use transform translate to move it */
+    transform-origin: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    -webkit-mask-image: radial-gradient(500px at 50% 50%, transparent 35%, black 100%);
+    mask-image: radial-gradient(500px at 50% 50%, transparent 35%, black 100%);
+    transition: 0.15s;
+}
+
+#a:hover~#blur {
+    box-shadow: 0px 0px 3px 5px #c68306;
+    -webkit-mask-image: radial-gradient(60px at 50% 50%, transparent 35%, black 100%);
+    mask-image: radial-gradient(60px at 50% 50%, transparent 35%, black 100%);
+    /*width: 70%;
+    height: 70%;*/
+    /*transform: scale(0.3, 0.3) !important;*/
+}
+
+/*falback for browsers that don't have backdrop-filter */
+@supports not ((backdrop-filter: blur(0px)) or (-webkit-backdrop-filter: blur(0px))) {
+    #blur {
+        background-color: rgba(255, 255, 255, .8);
+    }
+}

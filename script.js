@@ -32,6 +32,15 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
+// Remove transition delay on technologies icons when mouse is hover them
+let techs = document.querySelectorAll(".technology-icon");
+techs.forEach((el) => {
+      el.addEventListener(
+      "mouseenter",
+      (event) => event.target.style.transitionDelay = "0ms");
+   }
+);
+
 // Modal Functions
 function disableScrolling() {
    document.documentElement.setAttribute('class', 'no-scroll');

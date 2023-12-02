@@ -103,7 +103,7 @@ leftArrow.addEventListener(
    'mousedown',
    () => {
       imageIndex--;
-      if(imageIndex < 0) imageIndex = images.length-1;
+      if(imageIndex < 0) imageIndex = images[technologyIndex].length-1;
       galleryImage.src=images[technologyIndex][imageIndex];
    }
 );

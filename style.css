@@ -176,29 +176,29 @@
 }
 
 .gallery-arrow {
-  flex: 1 1;
+  flex: 1;
   color: lightgray;
-  transform: scale(1, 1);
+  transform: scale(1.5, 1.5);
   transition: 0.3s;
 }
 
 .gallery-arrow:hover {
   color: white;
-  transform: scale(1.2, 1.2);
+  transform: scale(2, 2);
 }
 
 #arrow-left {
-  margin-right: 10vw;
+  margin-right: 3vw;
 }
 
 #arrow-right {
-  margin-left: 10vw;
+  margin-left: 3vw;
 }
 
 #gallery-close-button {
-  position: relative;
-  left: 0px;
-  top: 0px;
+  position: absolute;
+  right: 2vw;
+  top: max(3vh, 3vw);
   transform:scale(1, 1);
   width: max(2.5vw, 2.5vh);
   height: max(2.5vw, 2.5vh);

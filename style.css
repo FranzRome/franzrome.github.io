@@ -28,7 +28,7 @@
 }
 
 .technology-icon {
-  width: 6,25vw;
+  width: 6.25vw;
   height: 6.25vw;
   transform: scale(1);
   transition: 0.3s;
@@ -160,14 +160,17 @@
   display: flex;
   flex: 3 3;
   flex-direction: row;
-  /*justify-content: space-around;*/
   align-items: center;
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
 
 #gallery-body > #gallery-display {
   display: flex;
   align-items: flex-start;
-  padding: max(3vw, 3vh);
+ 
   background-color: #00000080;
   border-radius: max(0.3vw, 0.3vh);
   box-shadow: 3px 4px 6px black;
@@ -198,10 +201,10 @@
 #gallery-close-button {
   position: absolute;
   right: 2vw;
-  top: max(3vh, 3vw);
-  transform:scale(1, 1);
+  top: 3vh;
   width: max(2.5vw, 2.5vh);
   height: max(2.5vw, 2.5vh);
+  transform:scale(1, 1);
   color: lightgrey;
   transition: 0.3s;
 }

@@ -246,6 +246,18 @@ html {
   cursor: pointer;
 }
 
+/* Prevent hidden text during loading to improve first contentful paint time */
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'),
+    url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2)
+      format('woff2');
+  font-display: swap;
+}
+
+
 /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
 html {
   box-sizing: border-box

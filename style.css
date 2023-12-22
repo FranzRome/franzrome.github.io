@@ -26,14 +26,16 @@ html {
 
 .icons-container {
   display: flex;
+  justify-content: center;
   gap: 28px;
   padding-top: 2vw;
   padding-bottom: 2vw;
 }
 
 .technology-icon {
-  width: 6.25vw;
-  height: 6.25vw;
+  display: flex;
+  width: 6.5vw;
+  height: 6.5vw;
   transform: scale(1);
   transition: 0.3s;
 }
@@ -58,14 +60,6 @@ html {
   transition-delay: 2000ms;
 }
 
-.icons-container > p{
-  flex-grow: 3;
-  font-size: 2vw;
-  width: 16vw;
-  height: auto;
-  transition-delay: 2500ms;
-}
-
 @keyframes growshrink {
   0% {
     transform: scale(1);
@@ -78,6 +72,25 @@ html {
   100% {
     transform: scale(1);
   }
+}
+
+.hint-container {
+  display: flex;
+  justify-content:center;
+}
+
+.hint-arrow {
+  position:absolute;
+  width: 4vw;
+  height: 4vw;
+}
+
+.icons-hint {
+  font-size: 3vw;
+  margin-top: 4vw;
+  animation-name: growshrink;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 .linkedin-icon {
@@ -143,7 +156,7 @@ html {
 
 #privacy>p {
   font-style: italic;
-  font-size: 9pt;
+  font-size: 9px;
 }
 
 /* Image gallery */

@@ -48,10 +48,10 @@ galleryDisplay.style.transition = galleryTransition + "s"
 
 let images = [
    ['Assets/apps_screenshots/sidera1.jpg', 'Assets/apps_screenshots/sidera2.jpg', 'Assets/apps_screenshots/sidera4.jpg', 'Assets/apps_screenshots/sidera5.jpg', 'Assets/apps_screenshots/way2learn1.jpg', 'Assets/apps_screenshots/way2learn2.jpg', 'Assets/apps_screenshots/way2learn3.jpg'],
-   ['Assets/apps_screenshots/fresh_pineapple1.jpg', 'Assets/apps_screenshots/fresh_pineapple2.jpg', 'Assets/apps_screenshots/fresh_pineapple3.jpg'],
-   ['Assets/apps_screenshots/vue_weather1.jpg', 'Assets/apps_screenshots/vue_weather2.jpg'],
+   ['Assets/apps_screenshots/quiz_mockup.jpeg', 'Assets/apps_screenshots/fresh_pineapple1.jpg', 'Assets/apps_screenshots/fresh_pineapple2.jpg', 'Assets/apps_screenshots/fresh_pineapple3.jpg'],
+   ['Assets/apps_screenshots/vue_weather_mockup.jpeg', 'Assets/apps_screenshots/vue_weather1.jpg', 'Assets/apps_screenshots/vue_weather2.jpg'],
    ['Assets/apps_screenshots/pokedex1.jpg', 'Assets/apps_screenshots/pokedex2.jpg'],
-   ['Assets/apps_screenshots/mercato_continuo1.jpg', 'Assets/apps_screenshots/mercato_continuo2.jpg', 'Assets/apps_screenshots/mercato_continuo3.jpg'],
+   ['Assets/apps_screenshots/mercato_continuo_mockup.jpeg', 'Assets/apps_screenshots/mercato_continuo1.jpg', 'Assets/apps_screenshots/mercato_continuo2.jpg', 'Assets/apps_screenshots/mercato_continuo3.jpg'],
 ];
 let technologyIndex = 0;
 let imageIndex = 0;

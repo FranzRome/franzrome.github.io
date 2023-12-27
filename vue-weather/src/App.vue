@@ -24,14 +24,15 @@
          <div class="weather-wrap" v-if="typeof weather.main != 'undefined'">
             <div class="location-box">
                <div class="location">
-                  {{ weather.name }}, {{ weather.sys.country }}
+                  {{ weather.name }}, {{ weather.sys.country }}<br>
+                  {{ Math.round(kelvinToCelsius(weather.main.temp_min)) }}°C / {{ Math.round(kelvinToCelsius(weather.main.temp_max)) }}°C
                </div>
                <div class="date">{{ dateBuilder() }}</div>
             </div>
 
             <div class="weather-box">
                <div class="temp">
-                  {{ Math.round(kelvinToCelsius(weather.main.temp)) }}°c
+                  {{ Math.round(kelvinToCelsius(weather.main.temp)) }}°C
                </div>
                <div class="weather">Weather: {{ weather.weather[0].main }}</div>
             </div>

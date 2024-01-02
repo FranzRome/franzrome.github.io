@@ -6,6 +6,13 @@ html {
   scroll-behavior: smooth;
 }
 
+.my-creations {
+  animation-name: colorchange;
+  animation-duration: 2.25s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
 .hidden {
   opacity: 0;
   filter: blur(5px);
@@ -71,6 +78,24 @@ html {
 
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes colorchange {
+  0% {
+    color: black;
+  }
+
+  50% {
+    color: #ff9800;
+  }
+
+  65% {
+    color: #ff9800;
+  }
+
+  100% {
+    color: black;
   }
 }
 

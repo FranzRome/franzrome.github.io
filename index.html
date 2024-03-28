@@ -70,9 +70,12 @@
 
     <section class="image-section w3-quarter w3-fixed w3-padding-small foreground">
       <!--IMAGE/AVATAR-->
-      <img src="avatar.webp" class="w3-circle w3-border w3-border-white w3-hover-border-orange" alt="My Profile Picture" onclick="openModal()"
+      <div style="position: relative; height: 200px">
+        <img src="avatar.webp" class="avatar w3-circle" alt="My Profile Picture" onclick="openModal()"
+        style="border-width: 3px !important; transition:0.3s" >
+        <img src="avatar2.webp" class="secondary-avatar w3-circle " alt="My Profile Picture" onclick="openModal()"
         style="border-width: 3px !important; transition:0.3s" />
-
+      </div>
 
       <!--SOCIAL LINKS-->
       <div style="display: flex; flex-direction: row; justify-content:center;">

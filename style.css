@@ -31,9 +31,16 @@ html {
   -webkit-mask-position: 0 0;
 }
 
+.paverse-app {
+  animation-name: colorPulse2;
+  animation-duration: 3s;
+  animation-delay: -1.5s;
+  animation-iteration-count: infinite;
+}
+
 .my-creations {
-  animation-name: colorchange;
-  animation-duration: 2.25s;
+  animation-name: colorPulse1;
+  animation-duration: 3s;
   animation-delay: 0s;
   animation-iteration-count: infinite;
 }
@@ -106,20 +113,46 @@ html {
   }
 }
 
-@keyframes colorchange {
+@keyframes colorPulse1 {
   0% {
+    transform: scale(1);
     color: black;
   }
 
-  50% {
-    color: #ff9800;
+  55% {
+    transform: scale(1.05);
+    color: #b16a00;
   }
 
   65% {
-    color: #ff9800;
+    transform: scale(1.05);
+    color: #b16a00;
   }
 
   100% {
+    transform: scale(1);
+    color: black;
+  }
+}
+
+@keyframes colorPulse2 {
+  0% {
+    transform: scale(1);
+    color: black;
+  }
+
+  55% {
+    transform: scale(1.05);
+    color: #1F6C5B;
+  }
+
+  65% {
+    transform: scale(1.05);
+    color: #1F6C5B;
+  }
+
+  100% {
+    transform: scale(1);
     color: black;
   }
 }

@@ -120,12 +120,12 @@ html {
   }
 
   55% {
-    transform: scale(1.05);
+    transform: scale(1);
     color: #b16a00;
   }
 
   65% {
-    transform: scale(1.05);
+    transform: scale(1);
     color: #b16a00;
   }
 
@@ -142,12 +142,12 @@ html {
   }
 
   55% {
-    transform: scale(1.05);
+    transform: scale(1);
     color: #1F6C5B;
   }
 
   65% {
-    transform: scale(1.05);
+    transform: scale(1);
     color: #1F6C5B;
   }
 

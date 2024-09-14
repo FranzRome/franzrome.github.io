@@ -65,7 +65,7 @@ html {
 
 .icons-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 28px;
   padding-top: 2vw;
   padding-bottom: 2vw;
@@ -73,14 +73,14 @@ html {
 
 .technology-icon {
   display: flex;
-  width: 6.5vw;
-  height: 6.5vw;
+  width: 6vw;
+  height: 6vw;
   transform: scale(1);
   transition: 0.3s;
 }
 
 .technology-icon:hover {
-  transform: scale(1.5);
+  transform: scale(1.05);
 }
 
 .technology-icon:nth-child(2) {

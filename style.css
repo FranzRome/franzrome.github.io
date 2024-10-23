@@ -1,3 +1,4 @@
+/*#region Custom CSS */
 * {
   user-select: none !important;
 }
@@ -5,6 +6,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+/*#region Side bar*/
 
 .avatar {
   position: absolute;
@@ -31,6 +34,11 @@ html {
   -webkit-mask-position: 0 0;
 }
 
+/*#endregion*/
+
+
+/*#region Navbar*/
+
 .paverse-app {
   animation-name: colorPulse2;
   animation-duration: 3s;
@@ -44,6 +52,8 @@ html {
   animation-delay: 0s;
   animation-iteration-count: infinite;
 }
+
+/*#endregion*/
 
 .hidden {
   opacity: 0;
@@ -98,6 +108,9 @@ html {
 .technology-icon:nth-child(5) {
   transition-delay: 2000ms;
 }
+
+
+/*#region Animations*/
 
 @keyframes growshrink {
   0% {
@@ -157,24 +170,7 @@ html {
   }
 }
 
-.hint-container {
-  display: flex;
-  justify-content:center;
-}
-
-.hint-arrow {
-  position:absolute;
-  width: 4vw;
-  height: 4vw;
-}
-
-.icons-hint {
-  font-size: 3vw;
-  margin-top: 4vw;
-  animation-name: growshrink;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
+/*#endregion*/
 
 .linkedin-icon {
   animation-name: growshrink;
@@ -232,6 +228,36 @@ html {
   color: rgb(0, 0, 0) !important;
 }
 
+
+/*#region Employment */
+
+.employment-section-title{
+  margin: 0 0 10px 0;
+}
+
+.employment-container{
+  margin: 0 0 12px 8px
+}
+.employment-title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.employment-duration{
+  font-size: 14px;
+  font-style: italic;
+  color: rgb(60, 60, 60);
+  margin: 0  0 6px 0px;
+}
+
+.employment-content {
+  margin: 0 0  0 6px ;
+  padding: 0;
+  font-weight: 500;
+}
+
+/*#endregion*/
+
 .no-scroll {
   height: 100%;
   overflow: hidden;
@@ -242,7 +268,9 @@ html {
   font-size: 9px;
 }
 
-/* Image gallery */
+
+/*#region Image gallery */
+
 #gallery{
   display: none;
   flex-direction: column;
@@ -329,6 +357,9 @@ html {
   cursor: pointer;
 }
 
+/*#endregion*/
+
+
 /* Prevent hidden text during loading to improve first contentful paint time */
 @font-face {
   font-family: 'Pacifico';
@@ -340,8 +371,10 @@ html {
   font-display: swap;
 }
 
+/*#endregion */
 
-/* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
+
+/*#region W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes  with some customizations*/
 html {
   box-sizing: border-box
 }
@@ -2435,6 +2468,10 @@ ul li {
   margin-top: 64px;
 }
 
+.w3-margin-top-10-percent {
+  margin-top: 10%;
+}
+
 .w3-margin-top-20-percent {
   margin-top: 20%;
 }
@@ -2567,3 +2604,5 @@ ul li {
     text-align: center;
   }
 }
+
+/*#endregion*/

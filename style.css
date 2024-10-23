@@ -1,4 +1,8 @@
 /*#region Custom CSS */
+
+
+/*#region General */
+
 * {
   user-select: none !important;
 }
@@ -7,34 +11,25 @@ html {
   scroll-behavior: smooth;
 }
 
-/*#region Side bar*/
-
-.avatar {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+p{
+  margin: 0;
 }
 
-.secondary-avatar {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  --s: 50px; /* control the size of the stripes */
-  --g:/var(--s) var(--s) content-box linear-gradient(90deg,#000 50%,#0000 0);
-  -webkit-mask:
-    linear-gradient(#000 0 0),
-    0 0 var(--g),calc(var(--s)/2) 0 var(--g);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude;
-  transition: .5s;
-  cursor: pointer;
+.quote {
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 500;
+  color: #606060;
 }
 
-.secondary-avatar:hover {
-  -webkit-mask-position: 0 0;
+.date-range {
+  font-size: 14px;
+  font-style: italic;
+  color: #606060;
+  margin: 0 0 4px 0px;
 }
 
-/*#endregion*/
+/*#endrewgion*/
 
 
 /*#region Navbar*/
@@ -51,6 +46,46 @@ html {
   animation-duration: 3s;
   animation-delay: 0s;
   animation-iteration-count: infinite;
+}
+
+/*#endregion*/
+
+
+/*#region Side bar*/
+
+.avatar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.secondary-avatar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  --s: 50px;
+  /* control the size of the stripes */
+  --g: /var(--s) var(--s) content-box linear-gradient(90deg, #000 50%, #0000 0);
+  -webkit-mask:
+    linear-gradient(#000 0 0),
+    0 0 var(--g), calc(var(--s)/2) 0 var(--g);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.secondary-avatar:hover {
+  mask-position: 0 0;
+  -webkit-mask-position: 0 0;
+}
+
+/*#endregion*/
+
+/*#region Education*/
+
+.education-title {
+  margin: 0;
 }
 
 /*#endregion*/
@@ -77,8 +112,7 @@ html {
   display: flex;
   justify-content: space-between;
   gap: 28px;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
+  padding: 1.2vw 0 1.6vw 0;
 }
 
 .technology-icon {
@@ -228,36 +262,6 @@ html {
   color: rgb(0, 0, 0) !important;
 }
 
-
-/*#region Employment */
-
-.employment-section-title{
-  margin: 0 0 10px 0;
-}
-
-.employment-container{
-  margin: 0 0 12px 8px
-}
-.employment-title {
-  margin: 0;
-  font-size: 18px;
-}
-
-.employment-duration{
-  font-size: 14px;
-  font-style: italic;
-  color: rgb(60, 60, 60);
-  margin: 0  0 6px 0px;
-}
-
-.employment-content {
-  margin: 0 0  0 6px ;
-  padding: 0;
-  font-weight: 500;
-}
-
-/*#endregion*/
-
 .no-scroll {
   height: 100%;
   overflow: hidden;
@@ -271,7 +275,7 @@ html {
 
 /*#region Image gallery */
 
-#gallery{
+#gallery {
   display: none;
   flex-direction: column;
   justify-content: space-around;
@@ -284,7 +288,7 @@ html {
   z-index: 2;
 }
 
-#gallery-body{
+#gallery-body {
   display: flex;
   flex: 3 3;
   flex-direction: row;
@@ -295,10 +299,10 @@ html {
   padding-right: 3vw;
 }
 
-#gallery-body > #gallery-display {
+#gallery-body>#gallery-display {
   display: flex;
   align-items: flex-start;
- 
+
   background-color: #00000080;
   border-radius: max(0.3vw, 0.3vh);
   box-shadow: 3px 4px 6px black;
@@ -332,7 +336,7 @@ html {
   top: 3vh;
   width: max(2.5vw, 2.5vh);
   height: max(2.5vw, 2.5vh);
-  transform:scale(1, 1);
+  transform: scale(1, 1);
   color: lightgrey;
   transition: 0.3s;
 }
@@ -342,13 +346,13 @@ html {
   color: white;
 }
 
-#gallery-display > .gallery-image {
+#gallery-display>.gallery-image {
   width: 37.5vw;
   height: 75vh;
   object-fit: contain;
 }
 
-#gallery > #description {
+#gallery>#description {
   font-size: 2.5vw;
 }
 
@@ -366,8 +370,7 @@ html {
   font-style: normal;
   font-weight: 400;
   src: local('Pacifico Regular'), local('Pacifico-Regular'),
-    url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2)
-      format('woff2');
+    url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
   font-display: swap;
 }
 
@@ -605,27 +608,39 @@ html {
 }
 
 h1 {
-  font-size: 36px
+  font-size: 36px;
+  font-weight: 700;
+  margin: 24px 0 24px 0;
 }
 
 h2 {
-  font-size: 30px
+  font-size: 32px;
+  font-weight: 700;
+  margin: 18px 0 18px 0;
 }
 
 h3 {
-  font-size: 24px
+  font-size: 28px;
+  font-weight: 700;
+  margin: 14px 0 14px 0;
 }
 
 h4 {
-  font-size: 20px
+  font-size: 22px;
+  font-weight: 700;
+  margin: 8px 0 0 0;
 }
 
 h5 {
-  font-size: 18px
+  font-size: 18px;
+  font-weight: 500;
+  margin: 4px 0 0 0;
 }
 
 h6 {
-  font-size: 16px
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
 }
 
 .w3-serif {
@@ -651,8 +666,6 @@ h4,
 h5,
 h6 {
   font-family: "Segoe UI", Arial, sans-serif;
-  font-weight: 400;
-  margin: 10px 0
 }
 
 .w3-wide {
@@ -801,7 +814,7 @@ a {
 }
 
 .w3-ul li {
-  padding: 8px 16px;
+  padding: 0px 16px;
   border-bottom: 1px solid #ddd
 }
 
@@ -2441,9 +2454,6 @@ ul li {
   margin: 0 auto;
 }
 
-.home p {
-  font-weight: bold;
-}
 
 .home h1 {
   font-size: 64px;
@@ -2455,7 +2465,7 @@ ul li {
 }
 
 .w3-ul li {
-  padding: 8px 0px;
+  padding: 4px 0px;
 }
 
 /*Utilities*/

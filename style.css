@@ -30,7 +30,44 @@ p{
   margin: 0 0 4px 0px;
 }
 
-/*#endrewgion*/
+/*#endregion*/
+
+
+/*#region Utils*/
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.foreground {
+  z-index: 1;
+}
+
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Prevent hidden text during loading to improve first contentful paint time */
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'),
+    url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
+  font-display: swap;
+}
+
+/*#endregion*/
 
 
 /*#region Navbar*/
@@ -80,132 +117,6 @@ p{
   mask-position: 0 0;
   -webkit-mask-position: 0 0;
 }
-
-/*#endregion*/
-
-/*#region Education*/
-
-.education-title {
-  margin: 0;
-}
-
-/*#endregion*/
-
-.hidden {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateX(-100%);
-  transition: all 1s;
-}
-
-.show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-}
-
-
-.foreground {
-  z-index: 1;
-}
-
-.icons-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 28px;
-  padding: 1.2vw 0 1.6vw 0;
-}
-
-.technology-icon {
-  display: flex;
-  width: 6vw;
-  height: 6vw;
-  transform: scale(1);
-  transition: 0.3s;
-}
-
-.technology-icon:hover {
-  transform: scale(1.05);
-}
-
-.technology-icon:nth-child(2) {
-  transition-delay: 500ms;
-}
-
-.technology-icon:nth-child(3) {
-  transition-delay: 1000ms;
-}
-
-.technology-icon:nth-child(4) {
-  transition-delay: 1500ms;
-}
-
-.technology-icon:nth-child(5) {
-  transition-delay: 2000ms;
-}
-
-
-/*#region Animations*/
-
-@keyframes growshrink {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.15);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes colorPulse1 {
-  0% {
-    transform: scale(1);
-    color: black;
-  }
-
-  55% {
-    transform: scale(1);
-    color: #b16a00;
-  }
-
-  65% {
-    transform: scale(1);
-    color: #b16a00;
-  }
-
-  100% {
-    transform: scale(1);
-    color: black;
-  }
-}
-
-@keyframes colorPulse2 {
-  0% {
-    transform: scale(1);
-    color: black;
-  }
-
-  55% {
-    transform: scale(1);
-    color: #1F6C5B;
-  }
-
-  65% {
-    transform: scale(1);
-    color: #1F6C5B;
-  }
-
-  100% {
-    transform: scale(1);
-    color: black;
-  }
-}
-
-/*#endregion*/
 
 .linkedin-icon {
   animation-name: growshrink;
@@ -263,18 +174,60 @@ p{
   color: rgb(0, 0, 0) !important;
 }
 
-.no-scroll {
-  height: 100%;
-  overflow: hidden;
+
+/*#endregion*/
+
+
+/*#region Education*/
+
+.education-title {
+  margin: 0;
 }
 
-#privacy>p {
-  font-style: italic;
-  font-size: 9px;
+/*#endregion*/
+
+
+/*#region Skills*/
+
+.icons-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 1.2vw 0 1.6vw 0;
 }
 
+.technology-icon {
+  display: flex;
+  width: 6vw;
+  height: 6vw;
+  transform: scale(1);
+  transition: 0.3s;
+}
 
-/*#region Image gallery */
+.technology-icon:hover {
+  transform: scale(1.05);
+}
+
+.technology-icon:nth-child(2) {
+  transition-delay: 500ms;
+}
+
+.technology-icon:nth-child(3) {
+  transition-delay: 1000ms;
+}
+
+.technology-icon:nth-child(4) {
+  transition-delay: 1500ms;
+}
+
+.technology-icon:nth-child(5) {
+  transition-delay: 2000ms;
+}
+
+/*#endregion*/
+
+
+/*#region Gallery */
 
 #gallery {
   display: none;
@@ -365,20 +318,80 @@ p{
 /*#endregion*/
 
 
-/* Prevent hidden text during loading to improve first contentful paint time */
-@font-face {
-  font-family: 'Pacifico';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Pacifico Regular'), local('Pacifico-Regular'),
-    url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
-  font-display: swap;
+/*#region Footer*/
+
+#privacy>p {
+  font-style: italic;
+  font-size: 9px;
 }
 
-/*#endregion */
+/*#endregion*/
 
 
-/*#region W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes  with some customizations*/
+/*#region Animations*/
+
+@keyframes growshrink {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes colorPulse1 {
+  0% {
+    transform: scale(1);
+    color: black;
+  }
+
+  55% {
+    transform: scale(1);
+    color: #b16a00;
+  }
+
+  65% {
+    transform: scale(1);
+    color: #b16a00;
+  }
+
+  100% {
+    transform: scale(1);
+    color: black;
+  }
+}
+
+@keyframes colorPulse2 {
+  0% {
+    transform: scale(1);
+    color: black;
+  }
+
+  55% {
+    transform: scale(1);
+    color: #1F6C5B;
+  }
+
+  65% {
+    transform: scale(1);
+    color: #1F6C5B;
+  }
+
+  100% {
+    transform: scale(1);
+    color: black;
+  }
+}
+
+/*#endregion*/
+
+
+/*#region W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes with some customizations*/
 html {
   box-sizing: border-box
 }

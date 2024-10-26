@@ -35,20 +35,23 @@
 
   <section>
     <!-- MOBILE NAVIGATION -->
-    <div class="w3-container w3-padding-16 w3-border-bottom w3-hide-medium w3-hide-large">
-      <a href="#home" class="w3-bar-item w3-button w3-hover-none">CURRICULUM VITAE</a>
-      <a href="https://franzrome.github.io/Paverse/" class="w3-button paverse-app">PAVERSE APP</a>
+    <div class="w3-container w3-padding-16 w3-margin-left w3-border-bottom w3-hide-medium w3-hide-large">
+      <a href="#home" class="w3-bar-item w3-hover-none">CURRICULUM VITAE</a>
+      <a href="https://franzrome.github.io/Paverse/" class="w3-bar-item w3-button w3-hover-none paverse-app">PAVERSE
+        APP</a>
       <div class="w3-dropdown-hover w3-hover-border-orange">
-        <button class="w3-button my-creations">JS PROJECTS</button>
-        <div class="w3-dropdown-content w3-bar-block w3-border">
+        <button
+          class="w3-bar-item w3-button w3-hover-none w3-white w3-border-white w3-bottombar w3-hover-border-orange my-creations transition">JS
+          PROJECTS</button>
+        <div class="w3-dropdown-content w3-bar-block">
           <a href="./vue-weather/" target="_blank"
-            class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange">Vue
+            class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">Vue
             Weather</a>
           <a href="https://pokedex-react-native-7909b.web.app/" target="_blank"
-            class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange">React Native
+            class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">React Native
             Pokedex</a>
           <a href="https://gas-continuo.web.app/home" target="_blank"
-            class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange">Angular
+            class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">Angular
             Mercato Continuo</a>
         </div>
       </div>
@@ -58,13 +61,13 @@
     </div>
     <div id="mobile-nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-sticky">
       <a href="#about"
-        class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange"
+        class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange transition"
         onclick="toggleNavigation()">ABOUT</a>
       <a href="#resume"
-        class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange"
+        class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange transition"
         onclick="toggleNavigation()">RESUME</a>
       <a href="#contact"
-        class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange"
+        class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange transition"
         onclick="toggleNavigation()">CONTACT</a>
     </div>
 
@@ -83,20 +86,20 @@
         <div class="w3-container w3-cell-center w3-margin-top w3-padding-small">
           <a class="icon-link w3-text-sand w3-hover-text-orange"
             href="https://www.linkedin.com/in/francesco-romeo-446b96141/" target="_blank">
-            <i data-feather="linkedin" class="linkedin-icon"></i>
+            <i data-feather="linkedin" class="linkedin-icon transition"></i>
           </a>
         </div>
         <div class="w3-container w3-cell-center w3-margin-top w3-padding-small">
           <a class="icon-link w3-text-sand w3-hover-text-orange" href="https://github.com/FranzRome" target="_blank">
-            <i data-feather="github" class="github-icon"></i>
+            <i data-feather="github" class="github-icon transition"></i>
           </a>
         </div>
       </div>
       <!--CV DOWNLOAD BUTTON-->
       <div class="w3-container w3-padding-16"
         style="display: flex; flex-direction: row; justify-content:space-between;">
-        <a href="Assets/CV_ITA.pdf" class="download-cv w3-hover-amber w3-button w3-round-small" target="_blank"
-          download>
+        <a href="Assets/CV_ITA.pdf" class="download-cv w3-hover-amber w3-button w3-round-small transition"
+          target="_blank" download>
           <span class="download-text">DOWNLOAD CV <br>
             <i data-feather="arrow-down" style="vertical-align: -0.35em;"></i>(Italian)</span>
         </a>
@@ -115,22 +118,26 @@
       <!--DESKTOP NAVIGATION-->
       <div class="w3-container w3-padding-large w3-border-bottom w3-hide-small">
         <a href="#home"
-          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange">CURRICULUM
+          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange transition">CURRICULUM
           VITAE</a>
-        <a href="https://franzrome.github.io/Paverse/" class="w3-button paverse-app">PAVERSE APP</a>
+        <a href="https://franzrome.github.io/Paverse/"
+          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange paverse-app transition">PAVERSE
+          APP</a>
         <!--a href="./vue-weather/"
           class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange">MY WEB APP</a-->
         <div class="w3-dropdown-hover w3-hover-border-orange">
-          <button class="w3-button my-creations">JS PROJECTS</button>
-          <div class="w3-dropdown-content w3-bar-block w3-border">
+          <button
+            class="w3-bar-item w3-button w3-hover-none w3-white w3-border-white w3-bottombar w3-hover-border-orange my-creations transition">JAVASCRIPT
+            PROJECTS</button>
+          <div class="w3-dropdown-content w3-bar-block">
             <a href="./vue-weather/" target="_blank"
-              class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange">Vue
+              class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">Vue
               Weather</a>
             <a href="https://pokedex-react-native-7909b.web.app/" target="_blank"
-              class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange">React
+              class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">React
               Native Pokedex</a>
             <a href="https://gas-continuo.web.app/home" target="_blank"
-              class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange">Angular
+              class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">Angular
               Mercato Continuo</a>
           </div>
         </div>
@@ -139,13 +146,13 @@
         <a href="./portfolio/mobile/"
         class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange">MOBILE APPS</a -->
         <a href="#contact"
-          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-right w3-hide-small"
+          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-right w3-hide-small transition"
           style="border-width: 2px !important;" onclick="toggleNavigation()">CONTACT</a>
         <a href="#resume"
-          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-right w3-hide-small"
+          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-right w3-hide-small transition"
           style="border-width: 2px !important;" onclick="toggleNavigation()">RESUME</a>
         <a href="#about"
-          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-right w3-hide-small"
+          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-right w3-hide-small transition"
           style="border-width: 2px !important;" onclick="toggleNavigation()">ABOUT</a>
       </div>
       <div class="content-container w3-margin-top-2">
@@ -199,7 +206,8 @@
                   Pavese </a>
               </h4>
               <p class="date-range w3-sans-serif">December 2023 - January 2024, Turin</p>
-              <p class="w3-container w3-sans-serif">Made a 3D virtual tour and augmented reality app using Unity Engine and C#
+              <p class="w3-container w3-sans-serif">Made a 3D virtual tour and augmented reality app using Unity Engine
+                and C#
                 targeted to Android devices.</p>
             </div>
 
@@ -218,7 +226,8 @@
                 Android Developer at <a href="https://www.gbs-group.it/" target="_blank"> GBS </a>
               </h4>
               <p class="date-range w3-sans-serif">November 2022 - January 2023, Turin</p>
-              <p class="w3-container w3-sans-serif">Developed a mobile application for an oracle using Kotlin and XML targeted
+              <p class="w3-container w3-sans-serif">Developed a mobile application for an oracle using Kotlin and XML
+                targeted
                 to
                 Android devices.</p>
             </div>
@@ -270,9 +279,11 @@
                   <ul class="w3-ul" style="font-weight: 500;">
                     <li class="w3-sans-serif"> - Excellent problem solving capability, fundamental for a developer.</li>
                     <li class="w3-sans-serif"> - Empathy and respect towards customers and colleagues.</li>
-                    <li class="w3-sans-serif"> - Notable communication skills and good confidence in front of an audience.</li>
+                    <li class="w3-sans-serif"> - Notable communication skills and good confidence in front of an
+                      audience.</li>
                     <li class="w3-sans-serif"> - Time management competence to improve productivity.</li>
-                    <li class="w3-sans-serif"> - Care of communication design and feedback from users regarding my products.</li>
+                    <li class="w3-sans-serif"> - Care of communication design and feedback from users regarding my
+                      products.</li>
                   </ul>
                 </div>
                 <!--TECHNICAL SKILLS-->
@@ -302,7 +313,8 @@
                     <h5>Game engines:</h5>
                     <p class="w3-container w3-sans-serif">Unity, Game Maker 2, Pico-8, Impact.</p>
                     <h5>Graphic & Prototyping:</h5>
-                    <p class="w3-container w3-sans-serif">Cinema-4D, Adobe Photoshop, Adobe Premiere Pro, Adobe Xd, Figma, Processing
+                    <p class="w3-container w3-sans-serif">Cinema-4D, Adobe Photoshop, Adobe Premiere Pro, Adobe Xd,
+                      Figma, Processing
                     </p>
                     <h5>Office:</h5>
                     <p class="w3-container w3-sans-serif">Google Suite, Microsoft Office, Miro, Canva</p>
@@ -321,7 +333,8 @@
             <div class="w3-container w3-margin-top-2 w3-cursive">
               <h4 class="w3-border-orange">MY HOBBIES AND INTERESTS</h3>
                 <div class="w3-container">
-                  <p class="w3-container w3-sans-serif"> In my spare time I love solving puzzles and creating new UI designs.</br>
+                  <p class="w3-container w3-sans-serif"> In my spare time I love solving puzzles and creating new UI
+                    designs.</br>
                     I also like to test web sites, APPs and APIs.</p>
                   </ul>
                 </div>

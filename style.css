@@ -140,6 +140,15 @@ a{
   animation-iteration-count: infinite;
 }
 
+
+.itch-icon {
+  animation-name: growshrink;
+  animation-duration: 1.5s;
+  animation-delay: -1.5s;
+  animation-iteration-count: infinite;
+  margin: 0 !important;
+}
+
 .download-cv {
   display: flex;
   flex-direction: row;
@@ -2502,7 +2511,7 @@ ul li {
 .image-section img {
   max-width: 60%;
   max-height: 60%;
-  margin-top: 50px !important;
+  margin-top: 50px;
   object-fit: cover;
 }
 

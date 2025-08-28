@@ -202,7 +202,8 @@ a{
 /*#region Education*/
 
 .education-title {
-  margin: 0;
+  margin: 0.75em 0 0 0;
+  font-size: 1.3em;
 }
 
 /*#endregion*/

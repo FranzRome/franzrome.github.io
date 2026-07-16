@@ -1,6 +1,5 @@
 /*#region Custom CSS */
 
-
 /*#region General */
 
 * {
@@ -428,8 +427,10 @@ a:visited {
 
 /*#endregion*/
 
+/*#endregion*/
 
 /*#region W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes with some customizations*/
+
 html {
   box-sizing: border-box
 }

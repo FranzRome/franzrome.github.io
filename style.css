@@ -2555,6 +2555,10 @@ ul li {
   padding: 26px;
 }
 
+.icon-link img {
+  height: 60px;
+}
+
 .content-container {
   width: 70%;
   margin: 0 auto;

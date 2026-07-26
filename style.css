@@ -491,14 +491,18 @@ template {
 }
 
 a {
+  color: rgba(255, 152, 0, 1) !important;
   background-color: transparent
 }
 
-a:active,
+a:active{
+  color: rgb(0, 91, 203) !important;
+}
 a:hover {
-  outline-width: 0;
-  font-size: 1.05em;
-  background-color: rgba(255, 152, 0, 0.8);
+  /*outline-width: 0;*/
+  font-size: 1.02em;
+  color: rgb(255, 199, 116) !important;
+  /*background-color: rgba(255, 152, 0, 0.8);*/
 }
 
 abbr[title] {

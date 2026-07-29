@@ -106,7 +106,7 @@ rightArrow.addEventListener(
 );
 
 function openGallery() {
-   if(!isGalleryOpen) {
+   if(!isGalleryOpen && images[technologyIndex][imageIndex] != undefined) {
       gallery.style.display = 'flex';
       setTimeout(()=>{galleryDisplay.style.transform = "scale(1,1)";}, 10);
       

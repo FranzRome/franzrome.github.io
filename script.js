@@ -36,11 +36,11 @@ let galleryTransitionms = galleryTransition * 1000;
 galleryDisplay.style.transition = galleryTransition + "s"
 
 let images = [
-   ['Assets/apps_screenshots/sidera1.jpg', 'Assets/apps_screenshots/sidera2.jpg', 'Assets/apps_screenshots/sidera4.jpg', 'Assets/apps_screenshots/sidera5.jpg', 'Assets/apps_screenshots/way2learn1.jpg', 'Assets/apps_screenshots/way2learn2.jpg', 'Assets/apps_screenshots/way2learn3.jpg'],
-   ['Assets/apps_screenshots/quiz_mockup.jpeg', 'Assets/apps_screenshots/fresh_pineapple1.jpg', 'Assets/apps_screenshots/fresh_pineapple2.jpg', 'Assets/apps_screenshots/fresh_pineapple3.jpg'],
-   ['Assets/apps_screenshots/vue_weather_mockup.jpeg', 'Assets/apps_screenshots/vue_weather1.jpg', 'Assets/apps_screenshots/vue_weather2.jpg'],
-   ['Assets/apps_screenshots/pokedex1.jpg', 'Assets/apps_screenshots/pokedex2.jpg'],
-   ['Assets/apps_screenshots/mercato_continuo_mockup.jpeg', 'Assets/apps_screenshots/mercato_continuo1.jpg', 'Assets/apps_screenshots/mercato_continuo2.jpg', 'Assets/apps_screenshots/mercato_continuo3.jpg'],
+   ['Assets/apps_screenshots/sidera1.webp', 'Assets/apps_screenshots/sidera2.webp', 'Assets/apps_screenshots/sidera3.webp', 'Assets/apps_screenshots/sidera4.webp', 'Assets/apps_screenshots/sidera5.webp', 'Assets/apps_screenshots/way2learn1.webp', 'Assets/apps_screenshots/way2learn2.webp', 'Assets/apps_screenshots/way2learn3.webp'],
+   ['Assets/apps_screenshots/quiz_mockup.webp', 'Assets/apps_screenshots/fresh_pineapple1.webp', 'Assets/apps_screenshots/fresh_pineapple2.webp', 'Assets/apps_screenshots/fresh_pineapple3.webp'],
+   ['Assets/apps_screenshots/vue_weather_mockup.webp', 'Assets/apps_screenshots/vue_weather1.webp', 'Assets/apps_screenshots/vue_weather2.webp'],
+   ['Assets/apps_screenshots/pokedex1.webp', 'Assets/apps_screenshots/pokedex2.webp'],
+   ['Assets/apps_screenshots/mercato_continuo_mockup.webp', 'Assets/apps_screenshots/mercato_continuo1.webp', 'Assets/apps_screenshots/mercato_continuo2.webp', 'Assets/apps_screenshots/mercato_continuo3.webp'],
    ['Assets/apps_screenshots/paverse_1.webp', 'Assets/apps_screenshots/paverse_2.webp', 'Assets/apps_screenshots/paverse_3.webp', 'Assets/apps_screenshots/paverse_4.webp', 'Assets/apps_screenshots/paverse_5.webp', 'Assets/apps_screenshots/paverse_6.webp', 'Assets/apps_screenshots/paverse_7.webp', 'Assets/apps_screenshots/paverse_8.webp'],
 ];
 let technologyIndex = 0;

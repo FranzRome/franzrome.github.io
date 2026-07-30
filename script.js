@@ -41,6 +41,7 @@ let images = [
    ['Assets/apps_screenshots/vue_weather_mockup.jpeg', 'Assets/apps_screenshots/vue_weather1.jpg', 'Assets/apps_screenshots/vue_weather2.jpg'],
    ['Assets/apps_screenshots/pokedex1.jpg', 'Assets/apps_screenshots/pokedex2.jpg'],
    ['Assets/apps_screenshots/mercato_continuo_mockup.jpeg', 'Assets/apps_screenshots/mercato_continuo1.jpg', 'Assets/apps_screenshots/mercato_continuo2.jpg', 'Assets/apps_screenshots/mercato_continuo3.jpg'],
+   ['Assets/apps_screenshots/paverse_1.webp', 'Assets/apps_screenshots/paverse_2.webp', 'Assets/apps_screenshots/paverse_3.webp', 'Assets/apps_screenshots/paverse_4.webp', 'Assets/apps_screenshots/paverse_5.webp', 'Assets/apps_screenshots/paverse_6.webp', 'Assets/apps_screenshots/paverse_7.webp', 'Assets/apps_screenshots/paverse_8.webp'],
 ];
 let technologyIndex = 0;
 let imageIndex = 0;

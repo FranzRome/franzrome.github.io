@@ -80,30 +80,26 @@ closeButton.addEventListener(
    }
 );
 
+// Gallery keyboard contrl
 document.addEventListener(
    'keydown',
    (e) => {
+      console.log(e.key);
       if(e.key == 'Escape') closeGallery();
+      if(e.key == 'ArrowLeft') previousImage();
+      if(e.key == 'ArrowRight') nextImage();
    }
 )
 
 // arrow click events
 leftArrow.addEventListener(
    'mousedown',
-   () => {
-      imageIndex--;
-      if(imageIndex < 0) imageIndex = images[technologyIndex].length-1;
-      galleryImage.src=images[technologyIndex][imageIndex];
-   }
+   () => {previousImage();}
 );
 
 rightArrow.addEventListener(
    'mousedown',
-   () => {
-      imageIndex++;
-      if(imageIndex >= images[technologyIndex].length) imageIndex = 0;
-      galleryImage.src=images[technologyIndex][imageIndex];
-   }
+   () => {nextImage();}
 );
 
 function openGallery() {
@@ -129,6 +125,18 @@ function closeGallery() {
       enableScrolling();
       isGalleryOpen = false;
    }
+}
+
+function previousImage(){
+   imageIndex--;
+   if(imageIndex < 0) imageIndex = images[technologyIndex].length-1;
+   galleryImage.src=images[technologyIndex][imageIndex];
+}
+
+function nextImage(){
+   imageIndex++;
+   if(imageIndex >= images[technologyIndex].length) imageIndex = 0;
+   galleryImage.src=images[technologyIndex][imageIndex];
 }
 
 //#endregion

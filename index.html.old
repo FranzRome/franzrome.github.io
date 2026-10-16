@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Francesco Romo Web Portfolio & Curriculum Vitae">
+  <title>Francesco Romeo</title>
+  <link rel="image_src" href="avatar.jpg"> <!-- THUMBNAIL -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+  <!-- OPAQUE OVERLAY -->
+  <div id="gallery">
+    <div id="gallery-body">
+      <i data-feather="arrow-left" id="arrow-left" class="gallery-arrow"></i>
+      <div id="gallery-display">
+        <img class="gallery-image" src="assets/apps_screenshots/fresh_pineapple1.jpg" alt="Gallery Image" />
+        <i data-feather="x" id="gallery-close-button"></i>
+      </div>
+      <i data-feather="arrow-right" id="arrow-right" class="gallery-arrow"></i>
+    </div>
+  </div>
+
+  <section>
+    <!-- MOBILE NAVIGATION -->
+    <div class="w3-container w3-padding-16 w3-margin-left w3-border-bottom w3-hide-medium w3-hide-large">
+      <a href="#home" class="w3-bar-item w3-hover-none">CV</a>
+      <a href="https://franzrome.github.io/Paverse/" class="w3-bar-item w3-button w3-hover-none paverse-app">PAVERSE</a>
+      <div class="w3-dropdown-hover w3-hover-border-orange">
+        <button
+          class="w3-bar-item w3-button w3-hover-none w3-white w3-border-white w3-bottombar w3-hover-border-orange my-creations transition">JS
+          PROJS</button>
+        <div class="w3-dropdown-content w3-bar-block">
+          <a href="./vue-weather/" target="_blank"
+            class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">Vue
+            Weather</a>
+          <a href="https://pokedex-react-native-7909b.web.app/" target="_blank"
+            class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">React Native
+            Pokedex</a>
+          <a href="https://gas-continuo.web.app/home" target="_blank"
+            class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">Angular
+            Mercato Continuo</a>
+        </div>
+      </div>
+      <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-margin-right"
+        onclick="toggleNavigation()">&#9776;</a>
+    </div>
+    <div id="mobile-nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-sticky">
+      <a href="#about"
+        class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange transition"
+        onclick="toggleNavigation()">ABOUT</a>
+      <a href="#resume"
+        class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange transition"
+        onclick="toggleNavigation()">RESUME</a>
+      <a href="#contact"
+        class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange transition"
+        onclick="toggleNavigation()">CONTACT</a>
+    </div>
+
+    <!-- SOCIAL SECTION -->
+    <section class="image-section w3-quarter w3-fixed w3-padding-small foreground left-border-amber">
+      <!--IMAGE/AVATAR-->
+      <div style="position: relative; height: 260px">
+        <img src="avatar.webp" class="avatar w3-circle" alt="My Profile Picture"
+          style="border-width: 3px !important; transition:0.3s">
+        <img src="avatar2.webp" class="secondary-avatar w3-circle " alt="My Profile Picture"
+          style="border-width: 3px !important; transition:0.3s" />
+      </div>
+
+      <!--SOCIAL LINKS-->
+      <div style="display: flex; flex-direction: row; justify-content:center; margin-bottom: 12vh;">
+        <div class="w3-container w3-cell-center w3-margin-top w3-padding-small">
+          <a class="icon-link w3-text-sand"
+            href="https://www.linkedin.com/in/francesco-romeo-446b96141/" target="_blank">
+            <i data-feather="linkedin" class="linkedin-icon transition"></i>
+          </a>
+        </div>
+        <div class="w3-container w3-cell-center w3-margin-top w3-padding-small">
+          <a class="icon-link w3-text-sand" href="https://github.com/FranzRome" target="_blank">
+            <i data-feather="github" class="github-icon transition"></i>
+          </a>
+        </div>
+        <div class="w3-container w3-cell-center w3-margin-top w3-padding-small">
+          <a class="icon-link w3-text-sand" href="https://franz97.itch.io/" target="_blank">
+            <image src="./assets/itch-icon.png" class="itch-icon transition" />
+          </a>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; justify-content:center;">
+        <h2 style="color:white"> Francesco Romeo </h2>
+        <h4 style="color:white; font-style: italic"> Freelance Web & Mobile Developer </h4>
+      </div>
+    </section>
+
+
+    <!--CV CONTENT SECTION-->
+    <section class="w3-threequarter w3-padding-large w3-right">
+      <!--DESKTOP NAVIGATION-->
+      <div class="w3-container w3-padding-large w3-border-bottom w3-hide-small">
+        <a href="#home"
+          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange transition">CURRICULUM
+          VITAE</a>
+           <a href="./strudel.htm"
+          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange transition">MUSIC COMPOSITION</a>
+        <a href="https://franzrome.github.io/Paverse/"
+          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange paverse-app transition">PAVERSE
+          APP</a>
+        <div class="w3-dropdown-hover w3-hover-border-orange">
+          <button
+            class="w3-bar-item w3-button w3-hover-none w3-white w3-border-white w3-bottombar w3-hover-border-orange my-creations transition">JAVASCRIPT PROJECTS</button>
+          <div class="w3-dropdown-content w3-bar-block">
+            <a href="./vue-weather/" target="_blank"
+              class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">Vue
+              Weather</a>
+            <a href="https://pokedex-react-native-7909b.web.app/" target="_blank"
+              class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">React
+              Native Pokedex</a>
+            <a href="https://gas-continuo.web.app/home" target="_blank"
+              class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">Angular
+              Mercato Continuo</a>
+          </div>
+        </div>
+        <a href="#contact"
+          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-right w3-hide-small transition"
+          style="border-width: 2px !important;" onclick="toggleNavigation()">CONTACT</a>
+        <a href="#resume"
+          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-right w3-hide-small transition"
+          style="border-width: 2px !important;" onclick="toggleNavigation()">RESUME</a>
+        <a href="#about"
+          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-right w3-hide-small transition"
+          style="border-width: 2px !important;" onclick="toggleNavigation()">ABOUT</a>
+      </div>
+      <div class="content-container w3-margin-top-2">
+        <!--HOME SECTION-->
+        <div id="home" class="home w3-container w3-margin-top-4 w3-cursive" style="text-align: center;">
+          <h1>Francesco Romeo</h1>
+          <h2 style="font-style: italic;">Freelance Web & Mobile Developer</h2>
+        </div>
+
+        <!--ABOUT SECTION-->
+        <div id="about" class="w3-container w3-margin-top-20-percent w3-cursive w3-large hidden">
+          <h2 class="w3-border-bottom w3-border-orange" style="border-width: 3px !important;">ABOUT</h2>
+          <div class="w3-container">
+            <p class="w3-margin-top w3-sans-serif">
+              At a very young age I became passionate about the world of technology and computer science.
+              At the age of 15 I learned my first visual programming language called Scratch. <br>
+              <br>
+              In high school I started learning procedural languages and OOP, the basics of the web and networks.
+              Moved by my passion for games I studied game development using Unity Engine. <br>
+              <br>
+              In college I continued learning OOP (java) and AI programming (Python).
+              In addition I also studied algorithm complexity (O notation) and how to make them work on large data
+              structures.
+            </p>
+          </div>
+        </div>
+
+        <!--RESUME-->
+        <div id="resume" class="w3-container w3-margin-top-20-percent w3-cursive hidden">
+          <h2 class="w3-border-bottom w3-border-orange" style="border-width: 3px !important;">RESUME</h2>
+          <div class="w3-container w3-margin-top-2 w3-cursive">
+
+            <!--EMPLOYMENT HISTORY SECTION-->
+            <h3 class="w3-border-orange employment-section-title">MY EMPLOYMENT HISTORY</h3>
+
+            <div class="w3-container">
+              <h4>
+                Flutter Developer at <a href="https://nexionengineering.com/en//" target="_blank"> Nexion Engineering
+                </a>
+              </h4>
+              <!-- <p class="date-range w3-sans-serif">December 2024 - Present, Turin</p> -->
+              <p class="w3-container w3-sans-serif">Maintained and developed IoT application's features for
+                interconnected workshops using Flutter and Syncfusion. Targeted both mobile and web platforms.</p>
+            </div>
+
+            <div class="w3-container">
+              <h4>
+                Mobile Developer at <a href="https://www.linkedin.com/company/syncroweb/" target="_blank"> Syncroweb </a>
+              </h4>
+              <!-- <p class="date-range w3-sans-serif">February 2024 - July 2024, Grugliasco</p> -->
+              <p class="w3-container w3-sans-serif">Developed logistics navigation applications using Flutter, clean
+                architecture,
+                and Bloc as state management pattern. Built for both iOS and Android devices.</p>
+            </div>
+
+            <div class="w3-container">
+              <h4>
+                Unity Developer at <a href="https://fondazionecesarepavese.it/en/" target="_blank"> Fondazione Cesare
+                  Pavese </a>
+              </h4>
+              <!-- <p class="date-range w3-sans-serif">June 2023 - January 2024, Turin</p> -->
+              <p class="w3-container w3-sans-serif">Made a 3D virtual tour and augmented reality app using Unity Engine
+                and C#
+                targeted to Android devices.</p>
+            </div>
+
+            <div class="w3-container">
+              <h4>
+                Frontend Developer at <a href="https://www.skudonet.com/" target="_blank"> Skudonet </a>
+              </h4>
+              <!-- <p class="date-range w3-sans-serif">July 2022 - May 2023, Seville</p> -->
+              <p class="w3-container w3-sans-serif">Maintained a load balancer dashboard using Angular, JavaScript, and
+                TypeScript
+                on Linux.</p>
+            </div>
+
+            <div class="w3-container">
+              <h4>
+                Computer vision specialist / FE Developer at <a
+                  href="https://www.linkedin.com/company/astar-sport-intelligence"> Astar srl. </a>
+              </h4>
+              <!-- <p class="date-range w3-sans-serif">November 2019 - May 2021, Turin</p> -->
+              <ul class="w3-ul w3-container w3-sans-serif" style="font-weight: 500;">
+                <li class="w3-sans-serif">
+                  - Composed datasets using DeepLabCut to subsequentially train a ResNet model and improved the tool
+                  UI to make it more efficient.
+                </li>
+                <li class="w3-sans-serif">
+                  - Marked hundreds of frames of a football match in order to make an AI (based on YOLOv3 and OpenCV)
+                  recognize the players and process stats.
+                </li>
+                <li class="w3-sans-serif">
+                  - Used Qt, the multiplatform framework to create the GUI of our product prototype
+                </li>
+                <li class="w3-sans-serif">
+                  - Made web interfaces to start recording from cameras placed in a remote stadium.
+                </li>
+              </ul>
+            </div>
+
+            <!---EDUCATION SECTION-->
+            <div class="w3-container w3-margin-top-2 w3-cursive">
+              <h3 class="w3-border-orange">MY EDUCATION</h3>
+              <ul>
+                <div class="w3-container">
+                  <li class="education-title w3-sans-serif">Mobile & Gaming Higher Technician, <a href="https://www.its-ictpiemonte.it/">ITS ICT Piemonte</a> - Turin (TO)</li>
+                  <p>
+                    Thesis on a navigation system to support logistics services based on clean architecture implemented in Flutter
+                    on Android and iOS operating systems
+                    <br>
+                    <u>Supporting material</u>:
+                    <a href="https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164">Clean Architecture, A Craftsman's Guide to Software Structure and Design - Robert C. Martin</a>
+                    </p>
+                  <!-- p class="date-range">November 2021 - July 2023</p -->
+                  <li class="education-title w3-sans-serif">Shader Programming, <a href="https://www.eventhorizonschool.com/">Event Horizon School</a> - Milano (MI)</li>
+                  <!--  <p class="date-range">October 2018</p> -->
+                  <li class="education-title w3-sans-serif">Highschool Diploma, <a href="https://www.itispininfarina.edu.it/">Pininfarina Institute</a> - Moncalieri (TO)
+                  </li>
+                  <!-- <p class="date-range">September 2012 - July 2017 </p> -->
+                </div>
+              </ul>
+            </div>
+
+            <!--SKILLS SECTION-->
+            <div class="w3-container w3-margin-top-2 w3-cursive">
+              <h3 class="w3-border-orange">MY SKILLS</h3>
+              <div class="w3-margin-left">
+                <!--SOFT SKILLS-->
+                <h4>Soft skills</h4>
+                <div class="w3-container">
+                  <ul class="w3-ul" style="font-weight: 500;">
+                    <li class="w3-sans-serif"> - Excellent problem solving capability, fundamental for a developer.</li>
+                    <li class="w3-sans-serif"> - Empathy and respect towards customers and colleagues.</li>
+                    <li class="w3-sans-serif"> - Notable communication skills and good confidence in front of an
+                      audience.</li>
+                    <li class="w3-sans-serif"> - Time management competence to improve productivity.</li>
+                    <li class="w3-sans-serif"> - Care of communication design and feedback from users regarding my
+                      products.</li>
+                  </ul>
+                </div>
+                <!--TECHNICAL SKILLS-->
+                <h4>Technical Skills</h5>
+                <h5 class="underlined">Tap on icons below to visualize projects gallery:</h4>
+                <div class="w3-container">
+                  <div class="icons-container">
+                    <img src="assets/tech_icons/kotlin_icon.webp" alt="Kotlin Icon" class="technology-icon hidden">
+                    <img src="assets/tech_icons/flutter_icon.webp" alt="Flutter Icon" class="technology-icon hidden">
+                    <img src="assets/tech_icons/vue_icon.webp" alt="Vue Icon" class="technology-icon hidden">
+                    <img src="assets/tech_icons/react_icon.webp" alt="React Icon" class="technology-icon hidden">
+                    <img src="assets/tech_icons/angular_icon.webp" alt="Angular Icon" class="technology-icon hidden">
+                    <img src="assets/tech_icons/unity_icon.webp" alt="Unity Icon" class="technology-icon hidden">
+                  </div>
+                  <div class="w3-container w3-sans-serif">
+                    <h5>Languages:</h5>
+                    <p class="w3-container w3-sans-serif"> Kotlin, Python, C, C++, C#, Java, JavaScript, HTML, CSS.</p>
+                    <h5>Frameworks & Libraries:</h5>
+                    <p class="w3-container w3-sans-serif">
+                      Picasso, Glide, Retrofit, Vue.js, Quasar, Angular, React, Flutter, React Native, Processing,
+                      PyQt, Selenium, Keras, TensorFlow, PyTorch.
+                    </p>
+                    <h5>Text Editor & IDE:</h5>
+                    <p class="w3-container w3-sans-serif">
+                      Android Studio, WebStorm, Pycharm, IntelliJ, XCode, Rider, Visual Studio, VS Code, Eclipse, Atom,
+                      Notepad++.
+                    </p>
+                    <h5>Game engines:</h5>
+                    <p class="w3-container w3-sans-serif">Unity, Game Maker 2, Pico-8, Impact.</p>
+                    <h5>Graphic & Prototyping:</h5>
+                    <p class="w3-container w3-sans-serif">Cinema-4D, Adobe Photoshop, Adobe Premiere Pro, Adobe Xd,
+                      Figma, Processing
+                    </p>
+                    <h5>Office:</h5>
+                    <p class="w3-container w3-sans-serif">Google Suite, Microsoft Office, Miro, Canva</p>
+                    <h5>Databases:</h5>
+                    <p class="w3-container w3-sans-serif">MySQL, MongoDB, Firestore, PostgreSQL</p>
+                    <h5>Versioning & Related Services:</h5>
+                    <p class="w3-container w3-sans-serif">git, GitLab, GitHub, Github Desktop, Source Tree</p>
+                    <h5>Object detection & Pose estimation:</h5>
+                    <p class="w3-container w3-sans-serif">Yolo v4 Darknet, DeepLabCut, OpenCV</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--CONTACT SECTION-->
+            <div id="contact" class="w3-container w3-margin-top-20-percent w3-cursive hidden">
+              <h2 class="w3-border-bottom w3-border-orange" style="border-width: 3px !important;">MY CONTACT DETAILS
+                </h3>
+                <div class="w3-container w3-margin-top-2" style="font-weight: 500;">
+                  <p class="w3-sans-serif">Name: Francesco Romeo</p>
+                  <p class="w3-sans-serif">Location: Turin, Italy</p>
+                  <p class="w3-sans-serif">Phone number: +39 393 326 1370</p>
+                  <p class="w3-sans-serif">E-mail: francesco.romeo-work@libero.it</p>
+                </div>
+            </div>
+
+
+            <div id="privacy" class="w3-container w3-margin-top-10-percent w3-cursive hidden">
+              <p class="w3-sans-serif">
+                I authorize the processing of personal data contained in my curriculum vitae based on art. 13 GDPR
+                679/16
+              </p>
+            </div>
+
+
+            <!--FOOTER-->
+            <footer class="w3-container w3-border-top w3-center w3-margin-top">
+              <p class="w3-sans-serif">©<span id="current-year"></span> - Francesco Romeo</p>
+            </footer>
+
+            <!--END OF CV SECTION-->
+    </section>
+  </section>
+  <script>
+    // Function to toggle mobile navigation
+    function toggleNavigation() {
+      let nav = document.getElementById("mobile-nav");
+      if (nav.classList.contains('w3-show')) {
+        nav.classList.remove('w3-show');
+      } else {
+        nav.classList.add('w3-show');
+      }
+    }
+  </script>
+  <script>
+    // Script to load feather icons
+    feather.replace()
+  </script>
+</body>
+
+</html>

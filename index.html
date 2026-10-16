@@ -1,370 +1,443 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Francesco Romo Web Portfolio & Curriculum Vitae">
-  <title>Francesco Romeo</title>
-  <link rel="image_src" href="avatar.jpg"> <!-- THUMBNAIL -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./style.css" />
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script defer src="script.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Francesco Romeo — Freelance Web &amp; Mobile Developer</title>
+  <meta name="description" content="Francesco Romeo is a freelance web and mobile developer based in Turin, Italy, building Flutter, Kotlin, Vue, Angular and Unity apps.">
+  <meta name="author" content="Francesco Romeo">
+  <meta name="theme-color" content="#0b0d10">
+  <link rel="canonical" href="https://franzrome.github.io/">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/avatar.jpg">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Francesco Romeo — Freelance Web &amp; Mobile Developer">
+  <meta property="og:description" content="Flutter, Kotlin, Vue, Angular and Unity apps, built in Turin.">
+  <meta property="og:url" content="https://franzrome.github.io/">
+  <meta property="og:image" content="https://franzrome.github.io/assets/img/avatar.jpg">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="assets/js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Francesco Romeo",
+    "jobTitle": "Freelance Web & Mobile Developer",
+    "url": "https://franzrome.github.io/",
+    "image": "https://franzrome.github.io/assets/img/avatar.jpg",
+    "address": { "@type": "PostalAddress", "addressLocality": "Turin", "addressCountry": "IT" },
+    "sameAs": [
+      "https://www.linkedin.com/in/francesco-romeo-446b96141/",
+      "https://github.com/FranzRome",
+      "https://franz97.itch.io/"
+    ]
+  }
+  </script>
 </head>
 
-<body>
+<body class="overflow-x-clip">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-accent focus:px-5 focus:py-3 focus:font-semibold focus:text-ink">Skip to content</a>
 
-  <!-- OPAQUE OVERLAY -->
-  <div id="gallery">
-    <div id="gallery-body">
-      <i data-feather="arrow-left" id="arrow-left" class="gallery-arrow"></i>
-      <div id="gallery-display">
-        <img class="gallery-image" src="Assets/apps_screenshots/fresh_pineapple1.jpg" alt="Gallery Image" />
-        <i data-feather="x" id="gallery-close-button"></i>
-      </div>
-      <i data-feather="arrow-right" id="arrow-right" class="gallery-arrow"></i>
-    </div>
+  <!-- Background: code rain + parallax layers -->
+  <canvas id="code-rain" class="pointer-events-none fixed inset-0 z-0 h-full w-full" aria-hidden="true"></canvas>
+  <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
+    <div class="dot-grid absolute inset-x-0 top-0 h-[160%] opacity-80" data-parallax="bg" data-depth="0.04"></div>
+    <div class="text-outline absolute left-[4%] top-[58%] font-mono text-[140px] font-bold leading-none md:text-[220px]" data-parallax="bg" data-depth="0.12">{ }</div>
+    <div class="text-outline-accent absolute right-[6%] top-[18%] font-mono text-[120px] font-bold leading-none md:text-[180px]" data-parallax="bg" data-depth="0.28">&lt;/&gt;</div>
+    <div class="text-outline absolute right-[12%] top-[92%] font-mono text-[110px] font-bold leading-none md:text-[160px]" data-parallax="bg" data-depth="0.2">=&gt;</div>
+    <div class="text-outline absolute left-[10%] top-[140%] font-mono text-[130px] font-bold leading-none md:text-[200px]" data-parallax="bg" data-depth="0.34">( )</div>
+    <div class="text-outline-accent absolute left-[58%] top-[170%] font-mono text-[110px] font-bold leading-none md:text-[150px]" data-parallax="bg" data-depth="0.16">;</div>
+    <div class="text-outline absolute right-[4%] top-[210%] font-mono text-[130px] font-bold leading-none md:text-[190px]" data-parallax="bg" data-depth="0.3">[ ]</div>
+    <div class="text-outline-accent absolute left-[18%] top-[250%] font-mono text-[120px] font-bold leading-none md:text-[170px]" data-parallax="bg" data-depth="0.22">#</div>
   </div>
 
-  <section>
-    <!-- MOBILE NAVIGATION -->
-    <div class="w3-container w3-padding-16 w3-margin-left w3-border-bottom w3-hide-medium w3-hide-large">
-      <a href="#home" class="w3-bar-item w3-hover-none">CV</a>
-      <a href="https://franzrome.github.io/Paverse/" class="w3-bar-item w3-button w3-hover-none paverse-app">PAVERSE</a>
-      <div class="w3-dropdown-hover w3-hover-border-orange">
-        <button
-          class="w3-bar-item w3-button w3-hover-none w3-white w3-border-white w3-bottombar w3-hover-border-orange my-creations transition">JS
-          PROJS</button>
-        <div class="w3-dropdown-content w3-bar-block">
-          <a href="./vue-weather/" target="_blank"
-            class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">Vue
-            Weather</a>
-          <a href="https://pokedex-react-native-7909b.web.app/" target="_blank"
-            class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">React Native
-            Pokedex</a>
-          <a href="https://gas-continuo.web.app/home" target="_blank"
-            class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">Angular
-            Mercato Continuo</a>
-        </div>
+  <!-- Navigation -->
+  <header class="sticky top-0 z-30 border-b border-white/[0.06] bg-ink/70 backdrop-blur-md">
+    <nav class="mx-auto flex max-w-[1200px] flex-wrap items-center gap-x-8 px-4 py-1.5 sm:px-8 lg:px-12" aria-label="Primary">
+      <a href="#home" class="py-2.5 font-mono text-lg font-bold tracking-tight hover:text-fg" aria-label="Francesco Romeo, back to top">fr<span class="animate-blink text-accent">_</span></a>
+
+      <button id="menu-toggle" type="button" class="ml-auto inline-flex size-11 items-center justify-center rounded-full border border-white/12 text-fg md:hidden" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+
+      <div id="menu" class="hidden w-full flex-col pb-3 md:flex md:w-auto md:flex-1 md:flex-row md:flex-wrap md:items-center md:justify-between md:pb-0">
+        <ul class="flex flex-col md:flex-row md:flex-wrap md:gap-x-6" role="list">
+          <li><a class="nav-link" href="#about">01.about</a></li>
+          <li><a class="nav-link" href="#experience">02.experience</a></li>
+          <li><a class="nav-link" href="#projects">03.projects</a></li>
+          <li><a class="nav-link" href="#skills">04.skills</a></li>
+          <li><a class="nav-link" href="#contact">05.contact</a></li>
+        </ul>
+        <ul class="flex flex-col md:flex-row md:gap-x-5" role="list">
+          <li><a class="nav-link" href="https://franzrome.github.io/strudel.htm">music ↗</a></li>
+          <li><a class="nav-link" href="https://franzrome.github.io/Paverse/">paverse ↗</a></li>
+        </ul>
       </div>
-      <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-margin-right"
-        onclick="toggleNavigation()">&#9776;</a>
-    </div>
-    <div id="mobile-nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-sticky">
-      <a href="#about"
-        class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange transition"
-        onclick="toggleNavigation()">ABOUT</a>
-      <a href="#resume"
-        class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange transition"
-        onclick="toggleNavigation()">RESUME</a>
-      <a href="#contact"
-        class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-hover-text-orange transition"
-        onclick="toggleNavigation()">CONTACT</a>
-    </div>
+    </nav>
+  </header>
 
-    <!-- SOCIAL SECTION -->
-    <section class="image-section w3-quarter w3-fixed w3-padding-small foreground left-border-amber">
-      <!--IMAGE/AVATAR-->
-      <div style="position: relative; height: 260px">
-        <img src="avatar.webp" class="avatar w3-circle" alt="My Profile Picture"
-          style="border-width: 3px !important; transition:0.3s">
-        <img src="avatar2.webp" class="secondary-avatar w3-circle " alt="My Profile Picture"
-          style="border-width: 3px !important; transition:0.3s" />
-      </div>
+  <main id="main" class="relative z-[2]">
 
-      <!--SOCIAL LINKS-->
-      <div style="display: flex; flex-direction: row; justify-content:center; margin-bottom: 12vh;">
-        <div class="w3-container w3-cell-center w3-margin-top w3-padding-small">
-          <a class="icon-link w3-text-sand"
-            href="https://www.linkedin.com/in/francesco-romeo-446b96141/" target="_blank">
-            <i data-feather="linkedin" class="linkedin-icon transition"></i>
-          </a>
-        </div>
-        <div class="w3-container w3-cell-center w3-margin-top w3-padding-small">
-          <a class="icon-link w3-text-sand" href="https://github.com/FranzRome" target="_blank">
-            <i data-feather="github" class="github-icon transition"></i>
-          </a>
-        </div>
-        <div class="w3-container w3-cell-center w3-margin-top w3-padding-small">
-          <a class="icon-link w3-text-sand" href="https://franz97.itch.io/" target="_blank">
-            <image src="./Assets/itch-icon.png" class="itch-icon transition" />
-          </a>
-        </div>
-      </div>
-
-      <div style="display: flex; flex-direction: column; justify-content:center;">
-        <h2 style="color:white"> Francesco Romeo </h2>
-        <h4 style="color:white; font-style: italic"> Freelance Web & Mobile Developer </h4>
-      </div>
-    </section>
-
-
-    <!--CV CONTENT SECTION-->
-    <section class="w3-threequarter w3-padding-large w3-right">
-      <!--DESKTOP NAVIGATION-->
-      <div class="w3-container w3-padding-large w3-border-bottom w3-hide-small">
-        <a href="#home"
-          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange transition">CURRICULUM
-          VITAE</a>
-           <a href="./strudel.htm"
-          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange transition">MUSIC COMPOSITION</a>
-        <a href="https://franzrome.github.io/Paverse/"
-          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange paverse-app transition">PAVERSE
-          APP</a>
-        <div class="w3-dropdown-hover w3-hover-border-orange">
-          <button
-            class="w3-bar-item w3-button w3-hover-none w3-white w3-border-white w3-bottombar w3-hover-border-orange my-creations transition">JAVASCRIPT PROJECTS</button>
-          <div class="w3-dropdown-content w3-bar-block">
-            <a href="./vue-weather/" target="_blank"
-              class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">Vue
-              Weather</a>
-            <a href="https://pokedex-react-native-7909b.web.app/" target="_blank"
-              class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">React
-              Native Pokedex</a>
-            <a href="https://gas-continuo.web.app/home" target="_blank"
-              class="w3-bar-item w3-button w3-hover-none w3-hover-border-bottom transition">Angular
-              Mercato Continuo</a>
+    <!-- Hero -->
+    <section id="home" class="mx-auto box-border max-w-[1200px] px-4 pb-24 pt-20 sm:px-8 md:pb-28 md:pt-28 lg:px-12">
+      <div class="flex flex-wrap items-center gap-16">
+        <div class="min-w-0 flex-[999_1_560px]">
+          <div data-depth="0.05">
+            <p class="mb-7 font-mono text-sm text-muted"><span class="text-accent">~/turin</span> $ whoami</p>
+            <h1 class="m-0 text-[clamp(56px,9vw,132px)] font-bold leading-[0.9] tracking-[-0.045em]">Francesco<br>Romeo<span class="text-accent">.</span></h1>
+            <p class="mt-9 max-w-[540px] text-xl leading-relaxed text-muted">Freelance web &amp; mobile developer based in Turin. I build Flutter and Kotlin apps, Vue and Angular front-ends — and the occasional Unity world.</p>
           </div>
-        </div>
-        <a href="#contact"
-          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-right w3-hide-small transition"
-          style="border-width: 2px !important;" onclick="toggleNavigation()">CONTACT</a>
-        <a href="#resume"
-          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-right w3-hide-small transition"
-          style="border-width: 2px !important;" onclick="toggleNavigation()">RESUME</a>
-        <a href="#about"
-          class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-orange w3-right w3-hide-small transition"
-          style="border-width: 2px !important;" onclick="toggleNavigation()">ABOUT</a>
-      </div>
-      <div class="content-container w3-margin-top-2">
-        <!--HOME SECTION-->
-        <div id="home" class="home w3-container w3-margin-top-4 w3-cursive" style="text-align: center;">
-          <h1>Francesco Romeo</h1>
-          <h2 style="font-style: italic;">Freelance Web & Mobile Developer</h2>
-        </div>
-
-        <!--ABOUT SECTION-->
-        <div id="about" class="w3-container w3-margin-top-20-percent w3-cursive w3-large hidden">
-          <h2 class="w3-border-bottom w3-border-orange" style="border-width: 3px !important;">ABOUT</h2>
-          <div class="w3-container">
-            <p class="w3-margin-top w3-sans-serif">
-              At a very young age I became passionate about the world of technology and computer science.
-              At the age of 15 I learned my first visual programming language called Scratch. <br>
-              <br>
-              In high school I started learning procedural languages and OOP, the basics of the web and networks.
-              Moved by my passion for games I studied game development using Unity Engine. <br>
-              <br>
-              In college I continued learning OOP (java) and AI programming (Python).
-              In addition I also studied algorithm complexity (O notation) and how to make them work on large data
-              structures.
-            </p>
+          <div class="mt-11 flex flex-wrap items-center gap-3.5">
+            <a class="btn-primary" href="#projects">View projects
+              <svg class="size-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+            <a class="btn-ghost" href="assets/docs/CV_ITA.pdf" download>
+              <svg class="size-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Curriculum (ITA)
+            </a>
+            <div class="flex gap-2.5 sm:ml-1.5">
+              <a class="icon-btn" href="https://www.linkedin.com/in/francesco-romeo-446b96141/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a class="icon-btn" href="https://github.com/FranzRome" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+              <a class="icon-btn" href="https://franz97.itch.io/" target="_blank" rel="noopener" aria-label="itch.io">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="12" rx="4"/><line x1="7" y1="11" x2="7" y2="15"/><line x1="5" y1="13" x2="9" y2="13"/><circle cx="15.5" cy="11.5" r="0.6"/><circle cx="17.5" cy="14.5" r="0.6"/></svg>
+              </a>
+            </div>
           </div>
         </div>
 
-        <!--RESUME-->
-        <div id="resume" class="w3-container w3-margin-top-20-percent w3-cursive hidden">
-          <h2 class="w3-border-bottom w3-border-orange" style="border-width: 3px !important;">RESUME</h2>
-          <div class="w3-container w3-margin-top-2 w3-cursive">
-
-            <!--EMPLOYMENT HISTORY SECTION-->
-            <h3 class="w3-border-orange employment-section-title">MY EMPLOYMENT HISTORY</h3>
-
-            <div class="w3-container">
-              <h4>
-                Flutter Developer at <a href="https://nexionengineering.com/en//" target="_blank"> Nexion Engineering
-                </a>
-              </h4>
-              <!-- <p class="date-range w3-sans-serif">December 2024 - Present, Turin</p> -->
-              <p class="w3-container w3-sans-serif">Maintained and developed IoT application's features for
-                interconnected workshops using Flutter and Syncfusion. Targeted both mobile and web platforms.</p>
+        <div class="relative min-w-0 flex-[1_1_360px] pt-[72px]">
+          <div class="absolute right-2 top-0 z-[2] size-[150px] rounded-full border-2 border-accent bg-ink p-[5px]" data-depth="0.22">
+            <img src="assets/img/avatar.webp" alt="Portrait of Francesco Romeo" width="140" height="140" class="block size-full rounded-full object-cover" fetchpriority="high">
+          </div>
+          <div class="relative overflow-hidden rounded-2xl border border-white/[0.09] bg-surface/80 backdrop-blur-sm" data-depth="0.1">
+            <div class="flex items-center gap-2.5 border-b border-white/[0.07] px-[18px] py-3.5 font-mono text-xs text-dim">
+              <span class="size-2 rounded-full bg-accent" aria-hidden="true"></span>
+              <span>francesco.json</span>
             </div>
+<pre class="m-0 overflow-x-auto px-[22px] pb-[26px] pt-[22px] font-mono text-sm leading-[1.85] text-dim"><code>{
+  <span class="text-fg">"role"</span>: <span class="text-accent">"Web &amp; Mobile Developer"</span>,
+  <span class="text-fg">"based"</span>: <span class="text-accent">"Turin, Italy"</span>,
+  <span class="text-fg">"stack"</span>: [
+    <span class="text-accent">"Flutter"</span>, <span class="text-accent">"Kotlin"</span>, <span class="text-accent">"Vue"</span>,
+    <span class="text-accent">"Angular"</span>, <span class="text-accent">"React"</span>, <span class="text-accent">"Unity"</span>
+  ],
+  <span class="text-fg">"freelance"</span>: <span class="text-mint">true</span>
+}</code></pre>
+          </div>
+        </div>
+      </div>
 
-            <div class="w3-container">
-              <h4>
-                Mobile Developer at <a href="https://www.linkedin.com/company/syncroweb/" target="_blank"> Syncroweb </a>
-              </h4>
-              <!-- <p class="date-range w3-sans-serif">February 2024 - July 2024, Grugliasco</p> -->
-              <p class="w3-container w3-sans-serif">Developed logistics navigation applications using Flutter, clean
-                architecture,
-                and Bloc as state management pattern. Built for both iOS and Android devices.</p>
-            </div>
-
-            <div class="w3-container">
-              <h4>
-                Unity Developer at <a href="https://fondazionecesarepavese.it/en/" target="_blank"> Fondazione Cesare
-                  Pavese </a>
-              </h4>
-              <!-- <p class="date-range w3-sans-serif">June 2023 - January 2024, Turin</p> -->
-              <p class="w3-container w3-sans-serif">Made a 3D virtual tour and augmented reality app using Unity Engine
-                and C#
-                targeted to Android devices.</p>
-            </div>
-
-            <div class="w3-container">
-              <h4>
-                Frontend Developer at <a href="https://www.skudonet.com/" target="_blank"> Skudonet </a>
-              </h4>
-              <!-- <p class="date-range w3-sans-serif">July 2022 - May 2023, Seville</p> -->
-              <p class="w3-container w3-sans-serif">Maintained a load balancer dashboard using Angular, JavaScript, and
-                TypeScript
-                on Linux.</p>
-            </div>
-
-            <div class="w3-container">
-              <h4>
-                Computer vision specialist / FE Developer at <a
-                  href="https://www.linkedin.com/company/astar-sport-intelligence"> Astar srl. </a>
-              </h4>
-              <!-- <p class="date-range w3-sans-serif">November 2019 - May 2021, Turin</p> -->
-              <ul class="w3-ul w3-container w3-sans-serif" style="font-weight: 500;">
-                <li class="w3-sans-serif">
-                  - Composed datasets using DeepLabCut to subsequentially train a ResNet model and improved the tool
-                  UI to make it more efficient.
-                </li>
-                <li class="w3-sans-serif">
-                  - Marked hundreds of frames of a football match in order to make an AI (based on YOLOv3 and OpenCV)
-                  recognize the players and process stats.
-                </li>
-                <li class="w3-sans-serif">
-                  - Used Qt, the multiplatform framework to create the GUI of our product prototype
-                </li>
-                <li class="w3-sans-serif">
-                  - Made web interfaces to start recording from cameras placed in a remote stadium.
-                </li>
-              </ul>
-            </div>
-
-            <!---EDUCATION SECTION-->
-            <div class="w3-container w3-margin-top-2 w3-cursive">
-              <h3 class="w3-border-orange">MY EDUCATION</h3>
-              <ul>
-                <div class="w3-container">
-                  <li class="education-title w3-sans-serif">Mobile & Gaming Higher Technician, <a href="https://www.its-ictpiemonte.it/">ITS ICT Piemonte</a> - Turin (TO)</li>
-                  <p>
-                    Thesis on a navigation system to support logistics services based on clean architecture implemented in Flutter
-                    on Android and iOS operating systems
-                    <br>
-                    <u>Supporting material</u>:
-                    <a href="https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164">Clean Architecture, A Craftsman's Guide to Software Structure and Design - Robert C. Martin</a>
-                    </p>
-                  <!-- p class="date-range">November 2021 - July 2023</p -->
-                  <li class="education-title w3-sans-serif">Shader Programming, <a href="https://www.eventhorizonschool.com/">Event Horizon School</a> - Milano (MI)</li>
-                  <!--  <p class="date-range">October 2018</p> -->
-                  <li class="education-title w3-sans-serif">Highschool Diploma, <a href="https://www.itispininfarina.edu.it/">Pininfarina Institute</a> - Moncalieri (TO)
-                  </li>
-                  <!-- <p class="date-range">September 2012 - July 2017 </p> -->
-                </div>
-              </ul>
-            </div>
-
-            <!--SKILLS SECTION-->
-            <div class="w3-container w3-margin-top-2 w3-cursive">
-              <h3 class="w3-border-orange">MY SKILLS</h3>
-              <div class="w3-margin-left">
-                <!--SOFT SKILLS-->
-                <h4>Soft skills</h4>
-                <div class="w3-container">
-                  <ul class="w3-ul" style="font-weight: 500;">
-                    <li class="w3-sans-serif"> - Excellent problem solving capability, fundamental for a developer.</li>
-                    <li class="w3-sans-serif"> - Empathy and respect towards customers and colleagues.</li>
-                    <li class="w3-sans-serif"> - Notable communication skills and good confidence in front of an
-                      audience.</li>
-                    <li class="w3-sans-serif"> - Time management competence to improve productivity.</li>
-                    <li class="w3-sans-serif"> - Care of communication design and feedback from users regarding my
-                      products.</li>
-                  </ul>
-                </div>
-                <!--TECHNICAL SKILLS-->
-                <h4>Technical Skills</h5>
-                <h5 class="underlined">Tap on icons below to visualize projects gallery:</h4>
-                <div class="w3-container">
-                  <div class="icons-container">
-                    <img src="Assets/tech_icons/kotlin_icon.webp" alt="Kotlin Icon" class="technology-icon hidden">
-                    <img src="Assets/tech_icons/flutter_icon.webp" alt="Flutter Icon" class="technology-icon hidden">
-                    <img src="Assets/tech_icons/vue_icon.webp" alt="Vue Icon" class="technology-icon hidden">
-                    <img src="Assets/tech_icons/react_icon.webp" alt="React Icon" class="technology-icon hidden">
-                    <img src="Assets/tech_icons/angular_icon.webp" alt="Angular Icon" class="technology-icon hidden">
-                    <img src="Assets/tech_icons/unity_icon.webp" alt="Unity Icon" class="technology-icon hidden">
-                  </div>
-                  <div class="w3-container w3-sans-serif">
-                    <h5>Languages:</h5>
-                    <p class="w3-container w3-sans-serif"> Kotlin, Python, C, C++, C#, Java, JavaScript, HTML, CSS.</p>
-                    <h5>Frameworks & Libraries:</h5>
-                    <p class="w3-container w3-sans-serif">
-                      Picasso, Glide, Retrofit, Vue.js, Quasar, Angular, React, Flutter, React Native, Processing,
-                      PyQt, Selenium, Keras, TensorFlow, PyTorch.
-                    </p>
-                    <h5>Text Editor & IDE:</h5>
-                    <p class="w3-container w3-sans-serif">
-                      Android Studio, WebStorm, Pycharm, IntelliJ, XCode, Rider, Visual Studio, VS Code, Eclipse, Atom,
-                      Notepad++.
-                    </p>
-                    <h5>Game engines:</h5>
-                    <p class="w3-container w3-sans-serif">Unity, Game Maker 2, Pico-8, Impact.</p>
-                    <h5>Graphic & Prototyping:</h5>
-                    <p class="w3-container w3-sans-serif">Cinema-4D, Adobe Photoshop, Adobe Premiere Pro, Adobe Xd,
-                      Figma, Processing
-                    </p>
-                    <h5>Office:</h5>
-                    <p class="w3-container w3-sans-serif">Google Suite, Microsoft Office, Miro, Canva</p>
-                    <h5>Databases:</h5>
-                    <p class="w3-container w3-sans-serif">MySQL, MongoDB, Firestore, PostgreSQL</p>
-                    <h5>Versioning & Related Services:</h5>
-                    <p class="w3-container w3-sans-serif">git, GitLab, GitHub, Github Desktop, Source Tree</p>
-                    <h5>Object detection & Pose estimation:</h5>
-                    <p class="w3-container w3-sans-serif">Yolo v4 Darknet, DeepLabCut, OpenCV</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--CONTACT SECTION-->
-            <div id="contact" class="w3-container w3-margin-top-20-percent w3-cursive hidden">
-              <h2 class="w3-border-bottom w3-border-orange" style="border-width: 3px !important;">MY CONTACT DETAILS
-                </h3>
-                <div class="w3-container w3-margin-top-2" style="font-weight: 500;">
-                  <p class="w3-sans-serif">Name: Francesco Romeo</p>
-                  <p class="w3-sans-serif">Location: Turin, Italy</p>
-                  <p class="w3-sans-serif">Phone number: +39 393 326 1370</p>
-                  <p class="w3-sans-serif">E-mail: francesco.romeo-work@libero.it</p>
-                </div>
-            </div>
-
-
-            <div id="privacy" class="w3-container w3-margin-top-10-percent w3-cursive hidden">
-              <p class="w3-sans-serif">
-                I authorize the processing of personal data contained in my curriculum vitae based on art. 13 GDPR
-                679/16
-              </p>
-            </div>
-
-
-            <!--FOOTER-->
-            <footer class="w3-container w3-border-top w3-center w3-margin-top">
-              <p class="w3-sans-serif">©<span id="current-year"></span> - Francesco Romeo</p>
-            </footer>
-
-            <!--END OF CV SECTION-->
+      <div class="mt-24 flex items-center gap-3.5 font-mono text-xs tracking-[0.08em] text-dim" aria-hidden="true">
+        <span class="h-px w-12 bg-white/20"></span>
+        <span>SCROLL TO EXPLORE</span>
+      </div>
     </section>
-  </section>
-  <script>
-    // Function to toggle mobile navigation
-    function toggleNavigation() {
-      let nav = document.getElementById("mobile-nav");
-      if (nav.classList.contains('w3-show')) {
-        nav.classList.remove('w3-show');
-      } else {
-        nav.classList.add('w3-show');
-      }
-    }
-  </script>
-  <script>
-    // Script to load feather icons
-    feather.replace()
-  </script>
+
+    <!-- About -->
+    <section id="about" class="section-shell" aria-labelledby="about-title">
+      <div class="section-head">
+        <span class="section-ghost" aria-hidden="true" data-depth="0.14">01</span>
+        <span class="section-num">01.</span>
+        <h2 id="about-title" class="section-title">About</h2>
+        <span class="section-rule" aria-hidden="true"></span>
+      </div>
+      <div class="flex flex-wrap gap-14">
+        <p class="m-0 min-w-0 flex-[1_1_380px] text-[clamp(24px,2.6vw,32px)] font-medium leading-snug tracking-tight">Hooked on technology since I was a kid. Games pulled me into code — <span class="text-accent">curiosity kept me there.</span></p>
+        <ol class="m-0 flex min-w-0 flex-[1_1_460px] list-none flex-col p-0">
+          <li class="flex flex-col gap-2 border-t border-white/[0.08] py-[22px] sm:flex-row sm:gap-6">
+            <span class="shrink-0 pt-1 font-mono text-[13px] text-accent sm:basis-[120px]">age 15</span>
+            <p class="m-0 text-[17px] leading-relaxed text-muted">Wrote my first programs in Scratch, a visual programming language.</p>
+          </li>
+          <li class="flex flex-col gap-2 border-t border-white/[0.08] py-[22px] sm:flex-row sm:gap-6">
+            <span class="shrink-0 pt-1 font-mono text-[13px] text-accent sm:basis-[120px]">high school</span>
+            <p class="m-0 text-[17px] leading-relaxed text-muted">Learned procedural languages and OOP, the basics of the web and networks — and, driven by a passion for games, game development with Unity.</p>
+          </li>
+          <li class="flex flex-col gap-2 border-y border-white/[0.08] py-[22px] sm:flex-row sm:gap-6">
+            <span class="shrink-0 pt-1 font-mono text-[13px] text-accent sm:basis-[120px]">college</span>
+            <p class="m-0 text-[17px] leading-relaxed text-muted">Went deeper into OOP with Java and AI programming in Python, plus algorithm complexity (Big-O) and making algorithms scale on large data structures.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section-shell" aria-labelledby="experience-title">
+      <div class="section-head !mb-10">
+        <span class="section-ghost" aria-hidden="true" data-depth="0.14">02</span>
+        <span class="section-num">02.</span>
+        <h2 id="experience-title" class="section-title">Experience</h2>
+        <span class="section-rule" aria-hidden="true"></span>
+      </div>
+
+      <div class="flex flex-col border-b border-white/[0.08]">
+        <article class="flex flex-wrap gap-x-12 gap-y-4 rounded border-t border-white/[0.08] px-4 py-8 transition-colors hover:bg-white/[0.025]">
+          <div class="min-w-0 flex-[1_1_320px]">
+            <h3 class="m-0 text-2xl font-semibold tracking-tight">Flutter Developer</h3>
+            <a href="https://nexionengineering.com/en/" target="_blank" rel="noopener" class="mt-1.5 inline-block font-mono text-sm text-accent hover:underline">@ Nexion Engineering ↗</a>
+          </div>
+          <div class="min-w-0 flex-[1.6_1_420px]">
+            <p class="m-0 text-[17px] leading-relaxed text-muted">Maintained and developed features of an IoT application for interconnected workshops, targeting both mobile and web.</p>
+            <ul class="mt-4 flex flex-wrap gap-2" role="list" aria-label="Technologies"><li class="chip">Flutter</li><li class="chip">Syncfusion</li><li class="chip">IoT</li></ul>
+          </div>
+        </article>
+
+        <article class="flex flex-wrap gap-x-12 gap-y-4 rounded border-t border-white/[0.08] px-4 py-8 transition-colors hover:bg-white/[0.025]">
+          <div class="min-w-0 flex-[1_1_320px]">
+            <h3 class="m-0 text-2xl font-semibold tracking-tight">Mobile Developer</h3>
+            <a href="https://www.linkedin.com/company/syncroweb/" target="_blank" rel="noopener" class="mt-1.5 inline-block font-mono text-sm text-accent hover:underline">@ Syncroweb ↗</a>
+          </div>
+          <div class="min-w-0 flex-[1.6_1_420px]">
+            <p class="m-0 text-[17px] leading-relaxed text-muted">Developed logistics navigation apps for iOS and Android using clean architecture and Bloc for state management.</p>
+            <ul class="mt-4 flex flex-wrap gap-2" role="list" aria-label="Technologies"><li class="chip">Flutter</li><li class="chip">Bloc</li><li class="chip">Clean Architecture</li></ul>
+          </div>
+        </article>
+
+        <article class="flex flex-wrap gap-x-12 gap-y-4 rounded border-t border-white/[0.08] px-4 py-8 transition-colors hover:bg-white/[0.025]">
+          <div class="min-w-0 flex-[1_1_320px]">
+            <h3 class="m-0 text-2xl font-semibold tracking-tight">Unity Developer</h3>
+            <a href="https://fondazionecesarepavese.it/en/" target="_blank" rel="noopener" class="mt-1.5 inline-block font-mono text-sm text-accent hover:underline">@ Fondazione Cesare Pavese ↗</a>
+          </div>
+          <div class="min-w-0 flex-[1.6_1_420px]">
+            <p class="m-0 text-[17px] leading-relaxed text-muted">Built a 3D virtual tour and augmented-reality app for Android with Unity and C#.</p>
+            <ul class="mt-4 flex flex-wrap gap-2" role="list" aria-label="Technologies"><li class="chip">Unity</li><li class="chip">C#</li><li class="chip">AR</li></ul>
+          </div>
+        </article>
+
+        <article class="flex flex-wrap gap-x-12 gap-y-4 rounded border-t border-white/[0.08] px-4 py-8 transition-colors hover:bg-white/[0.025]">
+          <div class="min-w-0 flex-[1_1_320px]">
+            <h3 class="m-0 text-2xl font-semibold tracking-tight">Frontend Developer</h3>
+            <a href="https://www.skudonet.com/" target="_blank" rel="noopener" class="mt-1.5 inline-block font-mono text-sm text-accent hover:underline">@ Skudonet ↗</a>
+          </div>
+          <div class="min-w-0 flex-[1.6_1_420px]">
+            <p class="m-0 text-[17px] leading-relaxed text-muted">Maintained a load-balancer dashboard with Angular, JavaScript and TypeScript on Linux.</p>
+            <ul class="mt-4 flex flex-wrap gap-2" role="list" aria-label="Technologies"><li class="chip">Angular</li><li class="chip">TypeScript</li><li class="chip">Linux</li></ul>
+          </div>
+        </article>
+
+        <article class="flex flex-wrap gap-x-12 gap-y-4 rounded border-t border-white/[0.08] px-4 py-8 transition-colors hover:bg-white/[0.025]">
+          <div class="min-w-0 flex-[1_1_320px]">
+            <h3 class="m-0 text-2xl font-semibold tracking-tight">Computer Vision Specialist / FE Developer</h3>
+            <a href="https://www.linkedin.com/company/astar-sport-intelligence" target="_blank" rel="noopener" class="mt-1.5 inline-block font-mono text-sm text-accent hover:underline">@ Astar srl ↗</a>
+          </div>
+          <div class="min-w-0 flex-[1.6_1_420px]">
+            <ul class="m-0 flex list-none flex-col gap-2.5 p-0 text-[17px] leading-relaxed text-muted">
+              <li class="flex gap-3"><span class="font-mono text-accent" aria-hidden="true">›</span><span>Composed datasets with DeepLabCut to train a ResNet model, and improved the tool's UI for efficiency.</span></li>
+              <li class="flex gap-3"><span class="font-mono text-accent" aria-hidden="true">›</span><span>Labelled hundreds of football-match frames so a YOLOv3 + OpenCV model could recognise players and compute stats.</span></li>
+              <li class="flex gap-3"><span class="font-mono text-accent" aria-hidden="true">›</span><span>Built the product prototype's GUI with the Qt cross-platform framework.</span></li>
+              <li class="flex gap-3"><span class="font-mono text-accent" aria-hidden="true">›</span><span>Made web interfaces to start recording from cameras in a remote stadium.</span></li>
+            </ul>
+            <ul class="mt-4 flex flex-wrap gap-2" role="list" aria-label="Technologies"><li class="chip">Python</li><li class="chip">YOLOv3</li><li class="chip">OpenCV</li><li class="chip">Qt</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section-shell" aria-labelledby="projects-title">
+      <div class="section-head">
+        <span class="section-ghost" aria-hidden="true" data-depth="0.14">03</span>
+        <span class="section-num">03.</span>
+        <h2 id="projects-title" class="section-title">Selected projects</h2>
+        <span class="section-rule" aria-hidden="true"></span>
+      </div>
+
+      <div class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,320px),1fr))] gap-6">
+        <article class="card">
+          <a class="card-media" href="https://franzrome.github.io/Paverse/" tabindex="-1" aria-hidden="true"><img src="assets/img/projects/paverse_1.webp" alt="" loading="lazy" decoding="async"></a>
+          <div class="flex flex-1 flex-col gap-2.5 px-6 pb-6 pt-[22px]">
+            <span class="font-mono text-xs text-accent">Unity · C# · AR</span>
+            <h3 class="m-0 text-[22px] font-semibold">Paverse</h3>
+            <p class="m-0 leading-relaxed text-muted">3D virtual tour and augmented-reality app for Fondazione Cesare Pavese.</p>
+            <a href="https://franzrome.github.io/Paverse/" class="mt-auto inline-flex min-h-11 items-center gap-2 pt-2.5 font-mono text-[13px] hover:text-accent">open project ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card-media" href="https://franzrome.github.io/vue-weather/" tabindex="-1" aria-hidden="true"><img src="assets/img/projects/vue_weather_mockup.webp" alt="" loading="lazy" decoding="async"></a>
+          <div class="flex flex-1 flex-col gap-2.5 px-6 pb-6 pt-[22px]">
+            <span class="font-mono text-xs text-accent">Vue.js</span>
+            <h3 class="m-0 text-[22px] font-semibold">Vue Weather</h3>
+            <p class="m-0 leading-relaxed text-muted">A weather web app built with Vue.</p>
+            <a href="https://franzrome.github.io/vue-weather/" class="mt-auto inline-flex min-h-11 items-center gap-2 pt-2.5 font-mono text-[13px] hover:text-accent">open project ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card-media" href="https://gas-continuo.web.app/home" tabindex="-1" aria-hidden="true"><img src="assets/img/projects/mercato_continuo_mockup.webp" alt="" loading="lazy" decoding="async"></a>
+          <div class="flex flex-1 flex-col gap-2.5 px-6 pb-6 pt-[22px]">
+            <span class="font-mono text-xs text-accent">Angular</span>
+            <h3 class="m-0 text-[22px] font-semibold">Mercato Continuo</h3>
+            <p class="m-0 leading-relaxed text-muted">An Angular web app, live on Firebase.</p>
+            <a href="https://gas-continuo.web.app/home" target="_blank" rel="noopener" class="mt-auto inline-flex min-h-11 items-center gap-2 pt-2.5 font-mono text-[13px] hover:text-accent">open project ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card-media" href="https://pokedex-react-native-7909b.web.app/" tabindex="-1" aria-hidden="true"><img src="assets/img/projects/pokedex1.webp" alt="" loading="lazy" decoding="async" class="object-top"></a>
+          <div class="flex flex-1 flex-col gap-2.5 px-6 pb-6 pt-[22px]">
+            <span class="font-mono text-xs text-accent">React Native</span>
+            <h3 class="m-0 text-[22px] font-semibold">Pokédex</h3>
+            <p class="m-0 leading-relaxed text-muted">A Pokédex built with React Native, running on the web.</p>
+            <a href="https://pokedex-react-native-7909b.web.app/" target="_blank" rel="noopener" class="mt-auto inline-flex min-h-11 items-center gap-2 pt-2.5 font-mono text-[13px] hover:text-accent">open project ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <button type="button" class="card-media group cursor-zoom-in" data-gallery="quiz" aria-label="Open the Quiz &amp; Fresh Pineapple gallery (4 images)">
+            <img src="assets/img/projects/quiz_mockup.webp" alt="" loading="lazy" decoding="async">
+            <span class="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full border border-white/12 bg-ink/80 px-3 py-1.5 font-mono text-xs text-fg transition group-hover:border-accent/50 group-hover:bg-ink/95">
+              <svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>4 shots
+            </span>
+          </button>
+          <div class="flex flex-1 flex-col gap-2.5 px-6 pb-6 pt-[22px]">
+            <span class="font-mono text-xs text-accent">Flutter</span>
+            <h3 class="m-0 text-[22px] font-semibold">Quiz &amp; Fresh Pineapple</h3>
+            <p class="m-0 leading-relaxed text-muted">Cross-platform mobile apps built with Flutter.</p>
+            <button type="button" data-gallery="quiz" class="mt-auto inline-flex min-h-11 cursor-pointer items-center gap-2 self-start pt-2.5 font-mono text-[13px] text-fg transition-colors hover:text-accent">view gallery →</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <button type="button" class="card-media group cursor-zoom-in" data-gallery="sidera" aria-label="Open the Sidera &amp; Way2Learn gallery (8 images)">
+            <img src="assets/img/projects/sidera1.webp" alt="" loading="lazy" decoding="async" class="object-top">
+            <span class="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full border border-white/12 bg-ink/80 px-3 py-1.5 font-mono text-xs text-fg transition group-hover:border-accent/50 group-hover:bg-ink/95">
+              <svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>8 shots
+            </span>
+          </button>
+          <div class="flex flex-1 flex-col gap-2.5 px-6 pb-6 pt-[22px]">
+            <span class="font-mono text-xs text-accent">Kotlin · Android</span>
+            <h3 class="m-0 text-[22px] font-semibold">Sidera &amp; Way2Learn</h3>
+            <p class="m-0 leading-relaxed text-muted">Native Android apps written in Kotlin.</p>
+            <button type="button" data-gallery="sidera" class="mt-auto inline-flex min-h-11 cursor-pointer items-center gap-2 self-start pt-2.5 font-mono text-[13px] text-fg transition-colors hover:text-accent">view gallery →</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section-shell" aria-labelledby="skills-title">
+      <div class="section-head">
+        <span class="section-ghost" aria-hidden="true" data-depth="0.14">04</span>
+        <span class="section-num">04.</span>
+        <h2 id="skills-title" class="section-title">Skills &amp; tools</h2>
+        <span class="section-rule" aria-hidden="true"></span>
+      </div>
+
+      <ul class="grid grid-cols-[repeat(auto-fill,minmax(140px,1fr))] gap-4" role="list">
+        <li class="reveal flex flex-col items-center gap-3.5 rounded-[14px] border border-white/[0.08] bg-surface/80 px-3 pb-5 pt-[26px] transition hover:-translate-y-0.5 hover:border-accent/45" style="--d:0ms"><img src="assets/img/tech/kotlin_icon.webp" alt="" width="52" height="52" class="size-[52px] object-contain" loading="lazy"><span class="font-mono text-[13px] text-muted">Kotlin</span></li>
+        <li class="reveal flex flex-col items-center gap-3.5 rounded-[14px] border border-white/[0.08] bg-surface/80 px-3 pb-5 pt-[26px] transition hover:-translate-y-0.5 hover:border-accent/45" style="--d:90ms"><img src="assets/img/tech/flutter_icon.webp" alt="" width="52" height="52" class="size-[52px] object-contain" loading="lazy"><span class="font-mono text-[13px] text-muted">Flutter</span></li>
+        <li class="reveal flex flex-col items-center gap-3.5 rounded-[14px] border border-white/[0.08] bg-surface/80 px-3 pb-5 pt-[26px] transition hover:-translate-y-0.5 hover:border-accent/45" style="--d:180ms"><img src="assets/img/tech/vue_icon.webp" alt="" width="52" height="52" class="size-[52px] object-contain" loading="lazy"><span class="font-mono text-[13px] text-muted">Vue</span></li>
+        <li class="reveal flex flex-col items-center gap-3.5 rounded-[14px] border border-white/[0.08] bg-surface/80 px-3 pb-5 pt-[26px] transition hover:-translate-y-0.5 hover:border-accent/45" style="--d:270ms"><img src="assets/img/tech/react_icon.webp" alt="" width="52" height="52" class="size-[52px] object-contain" loading="lazy"><span class="font-mono text-[13px] text-muted">React</span></li>
+        <li class="reveal flex flex-col items-center gap-3.5 rounded-[14px] border border-white/[0.08] bg-surface/80 px-3 pb-5 pt-[26px] transition hover:-translate-y-0.5 hover:border-accent/45" style="--d:360ms"><img src="assets/img/tech/angular_icon.webp" alt="" width="52" height="52" class="size-[52px] object-contain" loading="lazy"><span class="font-mono text-[13px] text-muted">Angular</span></li>
+        <li class="reveal flex flex-col items-center gap-3.5 rounded-[14px] border border-white/[0.08] bg-surface/80 px-3 pb-5 pt-[26px] transition hover:-translate-y-0.5 hover:border-accent/45" style="--d:450ms"><img src="assets/img/tech/unity_icon.webp" alt="" width="52" height="52" class="size-[52px] object-contain" loading="lazy"><span class="font-mono text-[13px] text-muted">Unity</span></li>
+      </ul>
+
+      <dl class="mt-16 grid grid-cols-[repeat(auto-fill,minmax(min(100%,260px),1fr))] gap-x-10 gap-y-9">
+        <div><dt class="mb-2.5 font-mono text-[13px] text-accent">// languages</dt><dd class="m-0 leading-relaxed text-muted">Kotlin, Dart, Python, C, C++, C#, Java, JavaScript, TypeScript, HTML, CSS</dd></div>
+        <div><dt class="mb-2.5 font-mono text-[13px] text-accent">// frameworks &amp; libraries</dt><dd class="m-0 leading-relaxed text-muted">Flutter, React Native, Vue.js, Quasar, Angular, React, Retrofit, Picasso, Glide, PyQt, Selenium, Keras, TensorFlow, PyTorch, Processing</dd></div>
+        <div><dt class="mb-2.5 font-mono text-[13px] text-accent">// game engines</dt><dd class="m-0 leading-relaxed text-muted">Unity, GameMaker 2, Pico-8, Impact</dd></div>
+        <div><dt class="mb-2.5 font-mono text-[13px] text-accent">// computer vision</dt><dd class="m-0 leading-relaxed text-muted">YOLOv4 Darknet, DeepLabCut, OpenCV</dd></div>
+        <div><dt class="mb-2.5 font-mono text-[13px] text-accent">// databases</dt><dd class="m-0 leading-relaxed text-muted">MySQL, PostgreSQL, MongoDB, Firestore</dd></div>
+        <div><dt class="mb-2.5 font-mono text-[13px] text-accent">// versioning</dt><dd class="m-0 leading-relaxed text-muted">git, GitHub, GitLab, GitHub Desktop, Sourcetree</dd></div>
+        <div><dt class="mb-2.5 font-mono text-[13px] text-accent">// editors &amp; IDEs</dt><dd class="m-0 leading-relaxed text-muted">Android Studio, Xcode, VS Code, Visual Studio, Rider, IntelliJ, WebStorm, PyCharm</dd></div>
+        <div><dt class="mb-2.5 font-mono text-[13px] text-accent">// design &amp; prototyping</dt><dd class="m-0 leading-relaxed text-muted">Figma, Adobe XD, Photoshop, Premiere Pro, Cinema 4D</dd></div>
+        <div><dt class="mb-2.5 font-mono text-[13px] text-accent">// soft skills</dt><dd class="m-0 leading-relaxed text-muted">Problem solving, empathy with clients and colleagues, public speaking, time management, attention to UX feedback</dd></div>
+      </dl>
+
+      <div class="mt-20">
+        <h3 class="mb-6 text-[28px] font-semibold tracking-tight">Education</h3>
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,300px),1fr))] gap-5">
+          <div class="rounded-[14px] border border-white/[0.08] bg-surface/80 p-6">
+            <span class="font-mono text-xs text-accent">ITS ICT Piemonte · Turin</span>
+            <h4 class="mb-2 mt-2.5 text-[19px] font-semibold">Mobile &amp; Gaming Higher Technician</h4>
+            <p class="m-0 text-[15px] leading-relaxed text-muted">Thesis: a Flutter navigation system for logistics services on Android and iOS, built on clean architecture.</p>
+          </div>
+          <div class="rounded-[14px] border border-white/[0.08] bg-surface/80 p-6">
+            <span class="font-mono text-xs text-accent">Event Horizon School · Milan</span>
+            <h4 class="mb-2 mt-2.5 text-[19px] font-semibold">Shader Programming</h4>
+            <p class="m-0 text-[15px] leading-relaxed text-muted">Specialised course in writing shaders.</p>
+          </div>
+          <div class="rounded-[14px] border border-white/[0.08] bg-surface/80 p-6">
+            <span class="font-mono text-xs text-accent">Pininfarina Institute · Moncalieri</span>
+            <h4 class="mb-2 mt-2.5 text-[19px] font-semibold">High School Diploma</h4>
+            <p class="m-0 text-[15px] leading-relaxed text-muted">Where procedural programming, OOP and Unity started.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-shell !pb-14" aria-labelledby="contact-title">
+      <div class="section-head">
+        <span class="section-ghost" aria-hidden="true" data-depth="0.14">05</span>
+        <span class="section-num">05.</span>
+        <h2 id="contact-title" class="section-title">Contact</h2>
+        <span class="section-rule" aria-hidden="true"></span>
+      </div>
+      <p class="m-0 max-w-[900px] text-[clamp(40px,6.4vw,88px)] font-bold leading-[0.98] tracking-[-0.04em]" data-depth="0.06">Got an app in mind? <span class="text-accent">Let's build it.</span></p>
+      <div class="mt-12 flex flex-wrap gap-3.5">
+        <a class="btn-primary min-h-14 max-w-full break-all px-7 text-[17px]" href="mailto:francesco.romeo-work@libero.it">
+          <svg class="size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          francesco.romeo-work@libero.it
+        </a>
+        <a class="btn-ghost min-h-14 text-[17px]" href="tel:+393933261370">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +39 393 326 1370
+        </a>
+        <span class="inline-flex min-h-14 items-center gap-2.5 px-2 text-[17px] text-muted">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Turin, Italy
+        </span>
+      </div>
+
+      <footer class="mt-28 flex flex-wrap justify-between gap-4 border-t border-white/[0.08] pt-7 font-mono text-xs text-dim">
+        <span>© <span id="year">2026</span> Francesco Romeo</span>
+        <span class="max-w-[620px]">I authorize the processing of personal data contained in my CV based on art. 13 GDPR 679/16.</span>
+      </footer>
+    </section>
+  </main>
+
+  <!-- Gallery dialog -->
+  <dialog id="gallery" class="m-0 h-dvh max-h-none w-screen max-w-none bg-ink/90 p-0 backdrop-blur-md text-fg backdrop:bg-transparent open:flex open:items-center open:justify-center" aria-labelledby="gallery-title">
+    <div class="box-border flex max-h-full w-full max-w-[1100px] flex-col gap-[18px] px-3 py-6 sm:px-10">
+      <div class="flex flex-wrap items-end justify-between gap-x-6 gap-y-3">
+        <div class="min-w-0">
+          <p id="gallery-tech" class="mb-1.5 font-mono text-xs text-accent"></p>
+          <h2 id="gallery-title" class="m-0 text-[clamp(24px,3vw,34px)] font-bold tracking-tight"></h2>
+        </div>
+        <div class="flex items-center gap-4">
+          <span id="gallery-status" class="font-mono text-[13px] text-muted" aria-live="polite"></span>
+          <button type="button" class="gal-btn size-11 cursor-pointer" data-gallery-close aria-label="Close gallery">
+            <svg class="size-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 sm:gap-4">
+        <button type="button" class="gal-btn size-12 cursor-pointer" data-gallery-prev aria-label="Previous image">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <figure class="m-0 flex h-[64vh] max-h-[660px] min-w-0 flex-1 items-center justify-center overflow-hidden rounded-2xl border border-white/[0.08] bg-ink-2">
+          <img id="gallery-image" src="data:," alt="" class="block max-h-full max-w-full object-contain">
+        </figure>
+        <button type="button" class="gal-btn size-12 cursor-pointer" data-gallery-next aria-label="Next image">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+      <div id="gallery-thumbs" class="flex justify-center gap-2.5 overflow-x-auto px-1 pb-1.5 pt-1"></div>
+    </div>
+  </dialog>
 </body>
-
 </html>
